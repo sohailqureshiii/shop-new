@@ -41,20 +41,13 @@ const Navigationbar = (props) => {
           </div>
         }
         menus={[
-          { label: "My Profile", href: "/myprofile", icon: null },
-          { label: "Cart", href: "/cart", icon: null },
+          { label: "Edit Profile", href: "/myprofile", icon: null },
           {
             label: "Orders",
-            href: "/account/orders",
+            href: "/Orderpage",
             icon: null,
           },
-
-          { label: "Wishlist", href: "", icon: null },
-          { label: "My Chats", href: "", icon: null },
-          { label: "Coupons", href: "", icon: null },
-          { label: "Rewards", href: "", icon: null },
-          { label: "Gift Cards", href: "", icon: null },
-          { label: "Notifications", href: "", icon: null },
+          { label: "Create Store", href: "", icon: null,  },
           { label: "Logout", href: "", icon: null,  },
         ]}
       />
@@ -162,7 +155,7 @@ const Navigationbar = (props) => {
         </ul>
         <div className="PrimaryNav-signup-Yf6">
           <ul className="PrimaryNav-loggedOutOptions-1SQ">
-            { renderNonLoggedInMenu() }
+            { renderLoggedInMenu() }
           </ul>
         </div>
         <button

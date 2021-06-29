@@ -5,6 +5,8 @@ import ExploreStore from "./containers/ExploreStore";
 import ShopProfile from "./containers/newShopProfile";
 import Signin from "./containers/Signin";
 import Signup from "./containers/SignUp";
+import OrderDeatilsP from "./containers/Oder details page";
+import OrderPage from "./containers/OrdersPage";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/:storeId/store" exact component={ShopProfile} />
           <Route path="/Signin" exact component={Signin} />
           <Route path="/Signup" exact component={Signup} />
+          <Route path="/account/orders" exact component={OrderPage} />
+          <Route path="/Orderpage" exact component={OrderDeatilsP} />
         </Switch>
       </Router>
     </div>
