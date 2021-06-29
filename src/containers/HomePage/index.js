@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import "./style.css";
 import Navigationbar from "../Navbar";
 import Footer from '../../components/Footerr/Footer'
-// import Product from "../../components/Product";
+import Product from "../../components/Product";
 
 /**
  * @author
@@ -13,16 +12,27 @@ import Footer from '../../components/Footerr/Footer'
 const HomePage = (props) => {
 
 
-  // const renderProduct = () => {
+  const renderProduct = () => {
     
-  //     return (
-  //       <div style={{ padding: "30px" }}>
-  //         <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
-  //             <Product />
-  //         </div>
-  //       </div>
-  //     );
-  //   }
+      return (
+        <div style={{ padding: "30px" }}>
+          <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              
+          </div>
+        </div>
+      );
+    }
   
   return (
     <>
@@ -102,7 +112,7 @@ const HomePage = (props) => {
           </ul>
         </nav>
 
-        {/* {renderProduct()} */}
+        {renderProduct()}
       </div>
       <Footer />
     </>
