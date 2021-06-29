@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 
 const ProductModal = (props) => {
 
-  const { productDetails, show, handleclose } = props;
-  if (!productDetails) {
-    return null;
-  }
+  const {show, handleclose } = props;
+  // if (!productDetails) {
+  //   return null;
+  // }
 
   const diffToast = () => {
     toast.success("Item Added Successfull !", {
@@ -119,14 +119,14 @@ const ProductModal = (props) => {
                   </p>
                   <div className="share-btn-container">
                     <WhatsappShareButton
-                      title={productDetails.name}
+                      // title={productDetails.name}
                       separator=" "
                       //   url={currentUrl}
                     >
                       <WhatsappIcon
                         logoFillColor="green"
                         round={true}
-                        title={productDetails.name}
+                        // title={productDetails.name}
                         separator=" "
                         // url={currentUrl}
                       ></WhatsappIcon>
