@@ -7,6 +7,8 @@ import Signin from "./containers/Signin";
 import Signup from "./containers/SignUp";
 import OrderDeatilsP from "./containers/Oder details page";
 import OrderPage from "./containers/OrdersPage";
+import Favorite from "./containers/Fav";
+import Planselection from "./containers/StorePlanselection";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           <Route path="/Signup" exact component={Signup} />
           <Route path="/account/orders" exact component={OrderPage} />
           <Route path="/Orderpage" exact component={OrderDeatilsP} />
+          <Route path="/favorite" exact component={Favorite} />
+          <Route path="/plansection" exact component={Planselection} />
+          
         </Switch>
       </Router>
     </div>
