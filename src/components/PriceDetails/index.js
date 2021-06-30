@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 
 /**
  * @author
@@ -47,7 +47,7 @@ const PriceDetails = (props) => {
                     borderColor: "rgb(66, 162, 162)",
                     color: "white",
                   }}
-                  // onClick={() => props.history.push(`/checkout`)}
+                  
                 >
                   Continue
                 </button>

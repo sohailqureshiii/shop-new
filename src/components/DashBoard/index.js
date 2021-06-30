@@ -58,7 +58,7 @@ const DashBoard = (props) => {
         </div>
       </div>
       <div class="main-content">
-        <header>
+        <header className='new-header-header-new'>
           <h2>
             <label for="nav-toogle">
               <span className="las la-bars"></span>

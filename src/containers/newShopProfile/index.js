@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { generatePublicUrl } from "../../urlConfig";
-import { WhatsappShareButton } from "react-share";
-import { WhatsappIcon } from "react-share";
+import Product from "../../components/Product";
 import "./style.css";
 import NavBar from "../Navbar";
 import Footer from "../../components/Footerr/Footer";
@@ -12,6 +10,22 @@ const StoreProfile = (props) => {
     let storeterm = storeId;
     return <div className="Btn-label-1Zf e2e-Btn-label">Follow</div>;
   };
+
+  const renderProduct = () => {
+    
+    return (
+      <div style={{ padding: "30px" }}>
+        <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -174,33 +188,50 @@ const StoreProfile = (props) => {
                         <table className="UserInfo-userStats-cMw">
                           <tbody>
                             <tr className="UserInfo-statRow-Erw">
-                              <td className="UserInfo-statColumn-1vg">
+                              <p className="UserInfo-bioHeader-fYW">
                                 Products
-                              </td>
-                              <td className="UserInfo-statColumn-1vg UserInfo-statValue-1_-">
-                                <a className="UserInfo-statValue-1_- UserInfo-disabledLink-Czm">
+                              </p>
+                              <td className="hddnddkdk">
+                                <a >
                                   {" "}
                                   207
                                 </a>
                               </td>
                             </tr>
                             <tr className="UserInfo-statRow-Erw">
-                              <td className="UserInfo-statColumn-1vg">
+                              <p className="UserInfo-bioHeader-fYW">
                                 followers
-                              </td>
-                              <td className="UserInfo-statColumn-1vg UserInfo-statValue-1_-">
-                                <a className="UserInfo-statValue-1_- UserInfo-disabledLink-Czm">
+                              </p>
+                              <td className="hddnddkdk">
+                                <a >
                                   {" "}
                                   60,12
                                 </a>
                               </td>
-                              \
                             </tr>
                           </tbody>
                         </table>
+                        <div className="UserInfo-infoBlockRow-1xR" style={{paddingTop:'10px',padding:'3px'}}>
+                        <div className="UserInfo-column-TMV">
+                          <p className="UserInfo-bioHeader-fYW">About Us</p>
+                          <div className="UserInfo-bio-YNh">
+                            <div>
+                              <div className="ReadMore-inline-3yb">
+                                NOSSA is a creative independent agency whose
+                                mission is to make brands closer to people. We
+                                create interesting ideas, whether digital,
+                                traditional or otherwise. A brand that is OURS
+                                ('NOSSA' in Portuguese) is also the brand of the
+                                client, of the agency, but mainly of the
+                                consumer. A NOSSA é uma agê…
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <span>Report Store</span>
                       </div>
                     </div>
-                    <div className="UserInfo-infoBlockRow-1xR"></div>
                   </div>
                 </div>
                 <div className="Profile-profileContents-3cP">
@@ -223,51 +254,9 @@ const StoreProfile = (props) => {
                       </span>
                     </div>
                   </div>
-                  <div className="Profile-tabs-DeN Profile-transitionBackwards-1fh">
-                    <div className="Profile-tab-3cJ">
-                      <div>
-                        {/* !----- */}
-                        <div className="e2e-Work">
-                          {/* !----- */}
-                          <div class>
-                            <div className="ContentGrid-grid-21i">
-                              <div className="ProjectCoverNeue-root-166 ContentGrid-gridItem-WHz">
-                                <div className="Cover-cover-2mr ProjectCoverNeue-cover-3Ni e2e-ProjectCoverNeue js-project-cover e2e-ProjectCoverNeue-cover ProjectCoverNeue-coverWithFlags-1Aq ProjectCoverNeue-loaded-26R">
-                                  <div className="Cover-wrapper-300 ProjectCoverNeue-wrapper-27j e2e-ProjectCoverNeue-wrapper">
-                                    <div className="Cover-content-2R2">
-                                      <div
-                                        className="DominantColor-dominantColor-2PM"
-                                        style={{
-                                          backgroundColor: "rgb(237, 238, 237)",
-                                        }}
-                                      ></div>
-                                      <Link
-                                      // to={""}
-                                      >
-                                        <img
-                                          sizes="404px"
-                                          style={{
-                                            objectFit: "contain",
-                                            padding: "10px",
-                                          }}
-                                          src={
-                                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiNYPxcqCkf06nf6RAMWy6pbA7YJpUKqw3IE1PoC3nPwU28mevG9hMxsqdTWO-v4CDU9k6xUo&usqp=CAc"
-                                          }
-                                          alt="Musee"
-                                          className="ProjectCoverNeue-image-1MZ js-cover-image"
-                                        ></img>
-                                      </Link>
-                                    </div>
-                                    <div className="Cover-overlay-28e Cover-showOnHover-Ks- Cover-transitionDone-22y"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* <div className="Profile-tabs-DeN Profile-transitionBackwards-1fh"> */}
+                  {renderProduct()}
+                  {/* </div> */}
                 </div>
               </div>
             </main>

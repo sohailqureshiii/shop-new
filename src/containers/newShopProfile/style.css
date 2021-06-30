@@ -11,6 +11,10 @@
   padding-top: 43px;
 }
 
+.about_us_store_pro{
+  font-size: 14px;
+}
+
 /* .main-profile-div{
   padding-top: 45px;
 } */
@@ -411,6 +415,9 @@ svg:not(:root) {
 
 .UserInfo-statColumn-1vg {
   padding: 5px 0;
+  color: #191919;
+  font-size: 14px;
+  font-weight: 500;
 }
 .UserInfo-statValue-1_- {
   color: inherit;
@@ -645,4 +652,38 @@ ul {
 }
 img {
   border: 0;
+}
+/* ///About us ///// */
+
+@media (min-width: 1201px){
+.UserInfo-infoBlockRow-1xR:not(:last-child) {
+    margin-bottom: 30px;
+}
+}
+.UserInfo-column-TMV {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.UserInfo-bioHeader-fYW {
+  color: #191919;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.ReadMore-inline-3yb {
+  display: inline;
+}
+
+.UserInfo-bio-YNh {
+  margin-bottom: 46px;
+  white-space: pre-wrap;
+  padding-top: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.hddnddkdk{
+  text-align: right;
 }

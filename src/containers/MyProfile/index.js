@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 import Profilepic from "../../img/profilepic.jpg";
 import NavBar from "../Navbar";
-import {
-  Modal
-} from "../../components/MaterialUI";
-
+import { Link } from 'react-router-dom'
+ 
 
 /**
  * @author
@@ -14,7 +11,6 @@ import {
  **/
 
 const MyProfile = (props) => {
-
   return (
     <>
       <NavBar />
@@ -22,40 +18,55 @@ const MyProfile = (props) => {
       <main className="SCxLW o64aR " role="main" style={{ paddingTop: "55px" }}>
         <div className="v9tJq v9tJq">
           <header className="HVbug">
-            <section className="XjzKX">
+        
+            <section
+              className="CardLayout__content"
+              style={{ paddingLeft: "100px" }}
+            >
+              <form>
+              <section className="XjzKX">
               <section className="_4dMfM">
                 <section className="M-jxE">
                   <img alt="Profile Pic" className="be6sr" src={Profilepic} />
                 </section>
               </section>
             </section>
-            <section className="zwlfE">
-              <section className="nZSzr">
-                <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
-                  user Name : Sohail37
-                </h2>
-              </section>
-            </section>
-            <section className="zwlfE">
-              <section className="nZSzr">
-                <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
-                   Name : Sohail Qureshi
-                </h2>
-              </section>
-            </section>
-            <section className="zwlfE">
-              <section className="nZSzr">
-                <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
-                  Email Id : Sohail@gmail.com
-                </h2>
-              </section>
-            </section>
-            <section className="zwlfE">
-              <section className="nZSzr">
-                <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
-                   Mobile No : 9119449383
-                </h2>
-              </section>
+                <section className="EmailPage__email-field form-group">
+                  <div>
+                    <label className="spectrum-FieldLabel">
+                      User Name : Sohail37
+                    </label>
+                   
+                  </div>
+                  <div>
+                    <label className="spectrum-FieldLabel">
+                      Name : Sohail Qurehsi
+                    </label>
+                    
+                  </div>
+                  <div>
+                    <label className="spectrum-FieldLabel">
+                    Email Address : Sohail@gmail.com
+                    </label>
+                   
+                  </div>
+                  <div>
+                    <label className="spectrum-FieldLabel">
+                    Mobile Number : 9119449383
+                    </label>
+                  </div>
+                </section>
+                <section className="EmailPage__submit mod-submit">
+                  <div className="ta-left"></div>
+                  <div className="ta-right">
+                  <Link to='/editprofile'>
+                  <button className="spectrum-Button spectrum-Button--cta SpinnerButton SpinnerButton--right">
+                      <span className="spectrum-Button-label">edit</span>
+                    </button>
+                  </Link>
+                  </div>
+                </section>
+              </form>
             </section>
           </header>
           {/* ProfileHEader  ends*/}

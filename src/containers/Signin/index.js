@@ -1,9 +1,12 @@
 import React from "react";
 import { Link }  from "react-router-dom";
 import './style.css'
+import NavBar from "../Navbar";
 
 const Signin = (props) => {
   return (
+    <>
+    <NavBar/>
       <div className="CardLayout-Toaster-Container">
         <section className="CardLayout">
           <header className="CardLayout__header">
@@ -19,7 +22,7 @@ const Signin = (props) => {
             <form>
               <section className="EmailPage__email-field form-group">
                 <div>
-                  <label className="spectrum-FieldLabel">Email Address</label>
+                  <label className="spectrum-FieldLabel">Email Address / Mobile Number</label>
                   <input className="spectrum-Textfield spectrum-Textfield--quiet"></input>
                 </div>
                 <div>
@@ -42,6 +45,7 @@ const Signin = (props) => {
           </section>
         </section>
       </div>
+      </>
   );
 };
 
