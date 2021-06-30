@@ -18,6 +18,9 @@ import StoreOrder from "./containers/StoreContainers/StoreOrder";
 import StoreDasboard from "./containers/StoreContainers/StoreDashboard";
 import ProductDetailsPage from "./containers/ProductDetailsPage";
 // import CheckoutPage from "./containers/CheckoutPage";
+import StoreCoustomers from "./containers/StoreContainers/StoreCoustomers";
+import StoreProfile from "./containers/StoreContainers/StoreProfile";
+
 
 function App() {
   return (
@@ -42,6 +45,9 @@ function App() {
           <Route path="/storeOrder" exact component={StoreOrder} />
           <Route path="/:productSlug/:productId/p" component={ProductDetailsPage}/>
           {/* <Route path="/checkout" exact component={CheckoutPage} /> */}
+          <Route path="/storeCoustomer" exact component={StoreCoustomers} />
+          <Route path="/storeProfile" exact component={StoreProfile} />
+
         </Switch>
       </Router>
     </div>

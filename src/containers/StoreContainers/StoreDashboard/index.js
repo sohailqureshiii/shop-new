@@ -4,7 +4,10 @@ import DashBoard from '../../../components/DashBoard'
 const StoreDasboard = () => {
     return (
         <DashBoard sidebar>
-         Store Home
+         No.of Products
+         No.of Order
+         No.of followers
+
       </DashBoard>
     )
 }
