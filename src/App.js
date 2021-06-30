@@ -8,6 +8,9 @@ import Signup from "./containers/SignUp";
 import OrderDeatilsP from "./containers/Oder details page";
 import OrderPage from "./containers/OrdersPage";
 import StoreForm from './containers/StoreForm'
+import StoreProduct from "./containers/StoreContainers/StoreProduct";
+import StoreOrder from "./containers/StoreContainers/StoreOrder";
+import StoreDasboard from "./containers/StoreContainers/StoreDashboard";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
           <Route path="/account/orders" exact component={OrderPage} />
           <Route path="/Orderpage" exact component={OrderDeatilsP} />
           <Route path="/storeForm" exact component={StoreForm} />
+          <Route path="/storeDashboard" exact component={StoreDasboard} />
+          <Route path="/storeProduct" exact component={StoreProduct} />
+          <Route path="/storeOrder" exact component={StoreOrder} />
         </Switch>
       </Router>
     </div>
