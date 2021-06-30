@@ -573,7 +573,7 @@ min-width: 0;
 
 .ProjectCoverNeue-statsVisible-19j .ProjectCoverNeue-visibleStatsAndOwners-2Av .ProjectCoverNeue-owners-1qo {
 font-size: 13px;
-font-weight: bold;
+font-weight: 400;
 }
 .Owners-overflowText-3Yn {
 overflow: hidden;
@@ -599,6 +599,8 @@ width: 20px;
 
 .Owners-root-3c9.Owners-dark-1Vh .Owners-owner-2lB {
 color: #191919;
+padding: 5px;
+font-family: "Amazon Ember",Arial,sans-serif;
 }
 
 .Owners-ownerImageEl-3cu {

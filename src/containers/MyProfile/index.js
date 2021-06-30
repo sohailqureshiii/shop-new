@@ -6,7 +6,7 @@ import NavBar from "../Navbar";
 import {
   Modal
 } from "../../components/MaterialUI";
-import { edituserProfile } from "../../actions";
+
 
 /**
  * @author
@@ -14,82 +14,6 @@ import { edituserProfile } from "../../actions";
  **/
 
 const MyProfile = (props) => {
-  const auth = useSelector((state) => state.auth);
-  const [firstName, setFirstName] = useState(auth.user.firstName);
-  const [lastName, setLastName] = useState(auth.user.lastName);
-  const [email, setEmail] = useState(auth.user.email);
-  const [userEditModal, setUserEditModal] = useState(false);
-  const dispatch = useDispatch();
-
-  const editUser = (e) => {
-    e.preventDefault();
-    const user = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-    };
-    dispatch(edituserProfile(auth.user));
-    setUserEditModal(false);
-  };
-
-  const renderUserEditModal = () => {
-    return (
-      <Modal
-        visible={userEditModal}
-        handleclose={() => setUserEditModal(false)}
-        // onSubmit={editUser}
-        modaltitle={`Edit Profile`}
-      >
-
-        <section className="CardLayout__content" style={{paddingLeft:'100px'}}>
-                <form>
-                  <section className="EmailPage__email-field form-group">
-                  <div>
-                      <label className="spectrum-FieldLabel">
-                        First Name
-                      </label>
-                      <input
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                      ></input>
-                    </div>
-                    <div>
-                      <label className="spectrum-FieldLabel">
-                        Last Name
-                      </label>
-                      <input
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                      ></input>
-                    </div>
-                    <div>
-                      <label className="spectrum-FieldLabel">Email</label>
-                      <input
-                       type="text"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                      ></input>
-                    </div>
-                  </section>
-                  <section className="EmailPage__submit mod-submit">
-                    <div className="ta-left"></div>
-                    <div className="ta-right">
-                      <button
-                        onClick={editUser}
-                        className="spectrum-Button spectrum-Button--cta SpinnerButton SpinnerButton--right"
-                      >
-                        <span className="spectrum-Button-label">Submit</span>
-                      </button>
-                    </div>
-                  </section>
-                </form>
-              </section>
-      </Modal>
-    );
-  };
 
   return (
     <>
@@ -108,35 +32,34 @@ const MyProfile = (props) => {
             <section className="zwlfE">
               <section className="nZSzr">
                 <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
-                  First Name : {auth.user.firstName}
+                  user Name : Sohail37
                 </h2>
               </section>
             </section>
             <section className="zwlfE">
               <section className="nZSzr">
                 <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
-                  Last Name : {auth.user.lastName}
+                   Name : Sohail Qureshi
                 </h2>
               </section>
             </section>
             <section className="zwlfE">
               <section className="nZSzr">
                 <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
-                  Email Id : {auth.user.email}
+                  Email Id : Sohail@gmail.com
                 </h2>
               </section>
             </section>
             <section className="zwlfE">
               <section className="nZSzr">
-                <button onClick={() => setUserEditModal(true)}>
-                  Edit Profile
-                </button>
+                <h2 className="_7Uhw9  fKFb1  yUEEX  KV-D4  fDxY1">
+                   Mobile No : 9119449383
+                </h2>
               </section>
             </section>
           </header>
           {/* ProfileHEader  ends*/}
         </div>
-        {renderUserEditModal()}
       </main>
     </>
   );

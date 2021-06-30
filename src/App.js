@@ -7,10 +7,16 @@ import Signin from "./containers/Signin";
 import Signup from "./containers/SignUp";
 import OrderDeatilsP from "./containers/Oder details page";
 import OrderPage from "./containers/OrdersPage";
+import Favorite from "./containers/Fav";
+import Planselection from "./containers/StorePlanselection";
+import MyProfile from "./containers/MyProfile";
+import CartPage from "./containers/CartPage";
+import EditProfile from "./components/EditProfile";
 import StoreForm from './containers/StoreForm'
 import StoreProduct from "./containers/StoreContainers/StoreProduct";
 import StoreOrder from "./containers/StoreContainers/StoreOrder";
 import StoreDasboard from "./containers/StoreContainers/StoreDashboard";
+
 
 function App() {
   return (
@@ -24,6 +30,11 @@ function App() {
           <Route path="/Signup" exact component={Signup} />
           <Route path="/account/orders" exact component={OrderPage} />
           <Route path="/Orderpage" exact component={OrderDeatilsP} />
+          <Route path="/favorite" exact component={Favorite} />
+          <Route path="/plansection" exact component={Planselection} />
+          <Route path="/myprofile" exact component={MyProfile} />
+          <Route path="/cart" exact component={CartPage} />
+          <Route path="/editprofile" exact component={EditProfile} />
           <Route path="/storeForm" exact component={StoreForm} />
           <Route path="/storeDashboard" exact component={StoreDasboard} />
           <Route path="/storeProduct" exact component={StoreProduct} />
@@ -33,5 +44,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
+// hbh
