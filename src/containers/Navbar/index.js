@@ -22,10 +22,10 @@ const Navigationbar = (props) => {
     return (
       <DropdownMenu
         menu={
+          <Link to="/myprofile">
           <div
             style={{ marginLeft: 10 }}
           >
-            <Link href="/myprofile">
               <img
                 src={Profilepiclogo}
                 style={{
@@ -37,11 +37,11 @@ const Navigationbar = (props) => {
                 alt="Shopisthan Logo"
               />
               <span style={{ fontSize: 15 }}> Sohail</span>
-            </Link>
           </div>
+          </Link>
         }
         menus={[
-          { label: "Edit Profile", href: "/myprofile", icon: null },
+          { label: "Edit Profile", href: "/editprofile", icon: null },
           {
             label: "Orders",
             href: "/Orderpage",

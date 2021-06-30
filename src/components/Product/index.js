@@ -45,16 +45,6 @@ const Product = (props) => {
                       </span>
                     </div>
                   </span>
-                  <div className="Stats-stats-1iI">
-                    <div className="Product__priceFlex">
-                      <div
-                        className="Owners-owner-2lB e2e-Owner-user-link"
-                        style={{ marginBottom: "20px" }}
-                      >
-                        View Details
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <span className="ProjectCoverNeue-ownersContainer-3Go">
                   <div className="Owners-root-3c9 Owners-dark-1Vh Owners-overflowText-3Yn ProjectCoverNeue-owners-1qo">
@@ -63,7 +53,7 @@ const Product = (props) => {
                         // to={`/${product.createdBy._id}/store`}
                         className="Owners-owner-2lB e2e-Owner-user-link"
                       >
-                        By -Apple Store
+                        By - Apple Store
                       </Link>
                     </span>
                   </div>

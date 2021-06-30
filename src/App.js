@@ -9,6 +9,9 @@ import OrderDeatilsP from "./containers/Oder details page";
 import OrderPage from "./containers/OrdersPage";
 import Favorite from "./containers/Fav";
 import Planselection from "./containers/StorePlanselection";
+import MyProfile from "./containers/MyProfile";
+import CartPage from "./containers/CartPage";
+import EditProfile from "./components/EditProfile";
 
 function App() {
   return (
@@ -24,11 +27,12 @@ function App() {
           <Route path="/Orderpage" exact component={OrderDeatilsP} />
           <Route path="/favorite" exact component={Favorite} />
           <Route path="/plansection" exact component={Planselection} />
-          
+          <Route path="/myprofile" exact component={MyProfile} />
+          <Route path="/cart" exact component={CartPage} />
+          <Route path="/editprofile" exact component={EditProfile} />
         </Switch>
       </Router>
     </div>
   );
 }
-
 export default App;
