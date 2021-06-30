@@ -87,6 +87,7 @@ const EditProfile = (props) => {
                 </section>
               </section>
             </section>
+            
             <form>
                   <section className="EmailPage__email-field form-group">
                   <div>

@@ -64,68 +64,68 @@ const CartPage = (props) => {
       </>
     );
   }
-  if (Object.keys.length === 0) {
-    return (
-      <>
-      <NavBar/>
-        <div
-          className="container"
-          style={{ backgroundColor: "rgb(255, 255, 255)" }}
-        >
-          <div
-            className="emptycartwish emptyPage"
-            style={{ padding: "30px 0px 0px" }}
-          >
-            <img
-              src="https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png"
-              title="Empty Cart Page Doodle"
-              alt="Empty Cart Page Doodle"
-              width="150px"
-            />
-            <div className="clearfix">Nothing in the Cart</div>
-            <div className="clearfix">
-              <a
-                class="success"
-                hreflang="en-in"
-                href="/"
-                style={{
-                  padding: "10px",
-                  border: "2px solid",
-                  borderRadius: "5px",
-                  display: "inline-block",
-                  marginTop: "15px",
-                }}
-              >
-                Continue Shopping
-              </a>
-            </div>
-          </div>
-          <div
-            className="emptylisting"
-            style={{ backgroundColor: "rgb(255, 255, 255)" }}
-          >
-            <hr
-              style={{
-                height: "1px",
-                borderWidth: "1px 0px 0px",
-                borderTopStyle: "solid",
-                borderRightStyle: "initial",
-                borderBottomStyle: "initial",
-                borderLeftStyle: "initial",
-                borderTopColor: "rgb(204, 204, 204)",
-                borderRightColor: "initial",
-                borderBottomColor: "initial",
-                borderLeftColor: "initial",
-                borderImage: "initial",
-              }}
-            ></hr>
-            <div style={{ margin: "20px auto" }}></div>
-          </div>
-        </div>
-        <Footer/>
-      </>
-    );
-  }
+  // if (Object.keys().length === 0) {
+  //   return (
+  //     <>
+  //     <NavBar/>
+  //       <div
+  //         className="container"
+  //         style={{ backgroundColor: "rgb(255, 255, 255)" }}
+  //       >
+  //         <div
+  //           className="emptycartwish emptyPage"
+  //           style={{ padding: "30px 0px 0px" }}
+  //         >
+  //           <img
+  //             src="https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png"
+  //             title="Empty Cart Page Doodle"
+  //             alt="Empty Cart Page Doodle"
+  //             width="150px"
+  //           />
+  //           <div className="clearfix">Nothing in the Cart</div>
+  //           <div className="clearfix">
+  //             <a
+  //               class="success"
+  //               hreflang="en-in"
+  //               href="/"
+  //               style={{
+  //                 padding: "10px",
+  //                 border: "2px solid",
+  //                 borderRadius: "5px",
+  //                 display: "inline-block",
+  //                 marginTop: "15px",
+  //               }}
+  //             >
+  //               Continue Shopping
+  //             </a>
+  //           </div>
+  //         </div>
+  //         <div
+  //           className="emptylisting"
+  //           style={{ backgroundColor: "rgb(255, 255, 255)" }}
+  //         >
+  //           <hr
+  //             style={{
+  //               height: "1px",
+  //               borderWidth: "1px 0px 0px",
+  //               borderTopStyle: "solid",
+  //               borderRightStyle: "initial",
+  //               borderBottomStyle: "initial",
+  //               borderLeftStyle: "initial",
+  //               borderTopColor: "rgb(204, 204, 204)",
+  //               borderRightColor: "initial",
+  //               borderBottomColor: "initial",
+  //               borderLeftColor: "initial",
+  //               borderImage: "initial",
+  //             }}
+  //           ></hr>
+  //           <div style={{ margin: "20px auto" }}></div>
+  //         </div>
+  //       </div>
+  //       <Footer/>
+  //     </>
+  //   );
+  // }
 
   return (
     <>
@@ -150,7 +150,7 @@ const CartPage = (props) => {
             />
           {/* ))} */}
 
-          <div
+          {/* <div
             style={{
               width: "100%",
               display: "flex",
@@ -163,10 +163,10 @@ const CartPage = (props) => {
             <div style={{ width: "250px" }}>
               <MaterialButton
                 title="PLACE ORDER"
-                // onClick={() => props.history.push(`/checkout`)}
+                
               />
             </div>
-          </div>
+          </div> */}
         </Card>
         <PriceDetails
           // totalItem={Object.keys(cart.cartItems).reduce(function (qty, key) {

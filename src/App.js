@@ -12,10 +12,12 @@ import Planselection from "./containers/StorePlanselection";
 import MyProfile from "./containers/MyProfile";
 import CartPage from "./containers/CartPage";
 import EditProfile from "./components/EditProfile";
-import StoreForm from './containers/StoreForm'
+import StoreForm from "./containers/StoreForm";
 import StoreProduct from "./containers/StoreContainers/StoreProduct";
 import StoreOrder from "./containers/StoreContainers/StoreOrder";
 import StoreDasboard from "./containers/StoreContainers/StoreDashboard";
+import ProductDetailsPage from "./containers/ProductDetailsPage";
+// import CheckoutPage from "./containers/CheckoutPage";
 import StoreCoustomers from "./containers/StoreContainers/StoreCoustomers";
 import StoreProfile from "./containers/StoreContainers/StoreProfile";
 
@@ -41,6 +43,8 @@ function App() {
           <Route path="/storeDashboard" exact component={StoreDasboard} />
           <Route path="/storeProduct" exact component={StoreProduct} />
           <Route path="/storeOrder" exact component={StoreOrder} />
+          <Route path="/:productSlug/:productId/p" component={ProductDetailsPage}/>
+          {/* <Route path="/checkout" exact component={CheckoutPage} /> */}
           <Route path="/storeCoustomer" exact component={StoreCoustomers} />
           <Route path="/storeProfile" exact component={StoreProfile} />
 
@@ -50,4 +54,3 @@ function App() {
   );
 }
 export default App;
-// hbh

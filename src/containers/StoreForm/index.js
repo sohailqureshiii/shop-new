@@ -75,7 +75,7 @@ const StoreForm = () => {
                   <section className="EmailPage__submit mod-submit">
                     <div className="ta-left"></div>
                     <div className="ta-right">
-                    <Link to="/Selection">
+                    <Link to="/plansection">
               
                       <button
                         // onClick={login}
