@@ -13,30 +13,35 @@ const DashBoard = (props) => {
          <div className="sidebar">
         <div className="sidebar-brand">
           <h1>
-            <span className="lab la-accusoft"></span> <span>Shopisthan</span> 
+            <span className="lab la-accusoft"></span> 
+            <span>
+            <NavLink to="/">
+               Shopisthan
+              </NavLink>
+            </span> 
           </h1>
         </div>
         <div className="sidebar-menu">
           <ul>
             <li>
-              <NavLink to="/storeDashboard" className="active">
+              <NavLink exact  activeClassName="active" to="/storeDashboard">
                 <span class="las la-igloo"></span> <span>Dashboard</span>
-              </NavLink>
+              </NavLink> 
             </li>
             <li>
-              <NavLink to="/storeCustomers" className="active">
+              <NavLink exact  activeClassName="active" to="/storeCoustomer">
                 <span class="las la-users"></span> <span>Customers</span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/storeProduct" className="active">
+              <NavLink  exact activeClassName="active"  to="/storeProduct">
                 <span class="las la-clipboard-list"></span>{" "}
                 <span>Product</span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/storeOrder" className="active">
-                <span class="las la-shopping-bag"></span> <span>Orders</span>
+              <NavLink exact  activeClassName="active" to="/storeOrder">
+                <span class="las la-shopping-bag"></span> <span>Order</span>
               </NavLink>
             </li>
             {/* <li>
@@ -72,8 +77,11 @@ const DashBoard = (props) => {
           <div className="user-wrapper">
             <img src="" alt="" width="30px" height="30px"></img>
             <div>
-              <h4>Store Name</h4>
+            <NavLink to="/storeProfile">
+               <h4>Store Name</h4>
               <small>User Name</small>
+              </NavLink>
+          
             </div>
           </div>
         </header>

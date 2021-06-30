@@ -4,7 +4,7 @@ import DashBoard from '../../../components/DashBoard'
 const StoreOrder = () => {
     return (
         <DashBoard sidebar>
-         Order
+         Store Order
       </DashBoard>
     )
 }

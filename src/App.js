@@ -16,6 +16,8 @@ import StoreForm from './containers/StoreForm'
 import StoreProduct from "./containers/StoreContainers/StoreProduct";
 import StoreOrder from "./containers/StoreContainers/StoreOrder";
 import StoreDasboard from "./containers/StoreContainers/StoreDashboard";
+import StoreCoustomers from "./containers/StoreContainers/StoreCoustomers";
+import StoreProfile from "./containers/StoreContainers/StoreProfile";
 
 
 function App() {
@@ -39,6 +41,9 @@ function App() {
           <Route path="/storeDashboard" exact component={StoreDasboard} />
           <Route path="/storeProduct" exact component={StoreProduct} />
           <Route path="/storeOrder" exact component={StoreOrder} />
+          <Route path="/storeCoustomer" exact component={StoreCoustomers} />
+          <Route path="/storeProfile" exact component={StoreProfile} />
+
         </Switch>
       </Router>
     </div>
