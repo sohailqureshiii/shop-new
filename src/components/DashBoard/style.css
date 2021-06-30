@@ -22,7 +22,7 @@
   background: var(--main-color);
   z-index: 100;
   transition: width 300ms;
-  background-color: aqua;
+  /* background-color: aqua; */
 
 }
 
@@ -30,7 +30,7 @@
     height: 90px;
     padding: 1rem 0rem 1rem 2rem;
     color: #fff;
-    background-color: blue;
+    /* background-color: blue; */
 }
 .sidebar-brand span{
  display: inline-block;
@@ -99,7 +99,7 @@
     transition: margin-left 300ms;
     margin-left: 100px;
     background-color: rgb(214, 27, 114);
-    background: blueviolet;
+    /* background: blueviolet; */
 }
 
 header{
@@ -170,7 +170,7 @@ main{
     padding: 2rem 1.5rem;
     background: #f1f5f9;
     min-height: calc(100vh - 100px);
-    background-color: blue;
+    /* background-color: blue; */
     /* padding-left: 0%; */
     margin-left: 100px;
 

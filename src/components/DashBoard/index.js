@@ -13,8 +13,11 @@ const DashBoard = (props) => {
          <div className="sidebar">
         <div className="sidebar-brand">
           <h1>
-            <span className="lab la-accusoft"></span> <span>
-            Shopisthan
+            <span className="lab la-accusoft"></span> 
+            <span>
+            <NavLink to="/">
+               Shopisthan
+              </NavLink>
             </span> 
           </h1>
         </div>
@@ -26,7 +29,7 @@ const DashBoard = (props) => {
               </NavLink> 
             </li>
             <li>
-              <NavLink exact  activeClassName="active" to="/storeCustomers">
+              <NavLink exact  activeClassName="active" to="/storeCoustomer">
                 <span class="las la-users"></span> <span>Customers</span>
               </NavLink>
             </li>
@@ -74,8 +77,11 @@ const DashBoard = (props) => {
           <div className="user-wrapper">
             <img src="" alt="" width="30px" height="30px"></img>
             <div>
-              <h4>Store Name</h4>
+            <NavLink to="/storeProfile">
+               <h4>Store Name</h4>
               <small>User Name</small>
+              </NavLink>
+          
             </div>
           </div>
         </header>
