@@ -12,6 +12,11 @@ import Planselection from "./containers/StorePlanselection";
 import MyProfile from "./containers/MyProfile";
 import CartPage from "./containers/CartPage";
 import EditProfile from "./components/EditProfile";
+import StoreForm from './containers/StoreForm'
+import StoreProduct from "./containers/StoreContainers/StoreProduct";
+import StoreOrder from "./containers/StoreContainers/StoreOrder";
+import StoreDasboard from "./containers/StoreContainers/StoreDashboard";
+
 
 function App() {
   return (
@@ -30,6 +35,10 @@ function App() {
           <Route path="/myprofile" exact component={MyProfile} />
           <Route path="/cart" exact component={CartPage} />
           <Route path="/editprofile" exact component={EditProfile} />
+          <Route path="/storeForm" exact component={StoreForm} />
+          <Route path="/storeDashboard" exact component={StoreDasboard} />
+          <Route path="/storeProduct" exact component={StoreProduct} />
+          <Route path="/storeOrder" exact component={StoreOrder} />
         </Switch>
       </Router>
     </div>

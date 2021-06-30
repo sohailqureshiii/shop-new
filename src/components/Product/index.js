@@ -6,15 +6,20 @@ const Product = (props) => {
   const { product } = props;
   const [productDetails, setProductDetails] = useState("");
   const [show, setShow] = useState(false);
-  const handleShow = (product) => {
+
+  const handleShow = () => {
     setShow(true);
-    setProductDetails(product);
+    // setProductDetails(product);
   };
 
   return (
     <>
       <div style={{ border: " 1px solid #d4d4d4", borderRadius: "5px" }}>
-        <div onClick={() => handleShow(product)}>
+        <div 
+        onClick={() => handleShow()}
+        // onClick={()=>setShow(true)}
+        
+        >
           <div className="Galleries-gridCover-j9D">
             <div className="ProjectCoverNeue-root-166 ProjectCoverNeue-statsVisible-19j ProjectCover-cover-3zh">
               <div className="Cover-cover-2mr ProjectCoverNeue-cover-3Ni e2e-ProjectCoverNeue js-project-cover e2e-ProjectCoverNeue-cover ProjectCoverNeue-coverWithFlags-1Aq ProjectCoverNeue-statsVisible-19j ProjectCoverNeue-loaded-26R">
@@ -68,7 +73,7 @@ const Product = (props) => {
       <ProductModal
         show={show}
         handleclose={() => setShow(false)}
-        productDetails={productDetails}
+        // productDetails={productDetails}
       />
     </>
   );

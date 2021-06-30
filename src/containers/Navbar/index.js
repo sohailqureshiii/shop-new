@@ -47,7 +47,7 @@ const Navigationbar = (props) => {
             href: "/Orderpage",
             icon: null,
           },
-          { label: "Create Store", href: "/", icon: null,  },
+          { label: "Create Store", href: "/storeForm", icon: null,  },
           { label: "Logout", href: "", icon: null,  },
         ]}
       />
