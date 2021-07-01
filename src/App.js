@@ -47,7 +47,6 @@ function App() {
           {/* <Route path="/checkout" exact component={CheckoutPage} /> */}
           <Route path="/storeCoustomer" exact component={StoreCoustomers} />
           <Route path="/storeProfile" exact component={StoreProfile} />
-
         </Switch>
       </Router>
     </div>

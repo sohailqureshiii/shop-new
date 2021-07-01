@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import "./style.css";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import Footer from "../../components/Footerr/Footer";
 import Store from "../../components/Store/index";
 
@@ -11,16 +11,19 @@ import Store from "../../components/Store/index";
  **/
 
 const ExploreStore = (props) => {
-
-
   const renderStores = () => {
     return (
       <div style={{ padding: "30px", paddingTop: "30px" }}>
         <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
-          <Store/>
-          <Store/>
-          <Store/>
-          <Store/>
+          <Store />
+          <Store />
+          <Store />
+          <Store />
+          <Store />
+          <Store />
+          <Store />
+          <Store />
+          <Store />
         </div>
       </div>
     );
@@ -65,20 +68,13 @@ const ExploreStore = (props) => {
                 <div className="SubCategory-root-mwE SubCategory-active-Sxz NavigationBar-subcategory-2m5">
                   <select
                     className="SubCategory-label-30F"
-                 
                     style={{ border: "none" }}
                   >
                     <option value="" style={{ border: "none" }}>
                       Category
                     </option>
-                  
-                      <option
-                       
-                        style={{ border: "none" }}
-                      >
-                       
-                      </option>
-        
+
+                    <option style={{ border: "none" }}></option>
                   </select>
                 </div>
               </a>

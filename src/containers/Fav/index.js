@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./style.css";
 import Profilepic from "../../img/profilepic.jpg";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductModal from "../../components/ProductModal";
 import Store from "../../components/Store";
+import Footer from "../../components/Footerr/Footer";
 
 /**
  * @author
@@ -148,6 +149,7 @@ const Favorite = (props) => {
         handleclose={() => setShow(false)}
         productDetails={productDetails}
       />
+      <Footer/>
     </>
   );
 };

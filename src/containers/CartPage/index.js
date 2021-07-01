@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 import PriceDetails from "../../components/PriceDetails";
 import "./style.css";
 import { MaterialButton } from "../../components/MaterialUI";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import Footer from "../../components/Footerr/Footer";
 
 

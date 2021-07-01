@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import Profilepic from "../../img/profilepic.jpg";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import { Link } from 'react-router-dom'
  
 

@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import "./style.css";
 import { Breed } from "../../components/MaterialUI";
 import { generatePublicUrl } from "../../urlConfig";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import Footer from "../../components/Footerr/Footer";
 
 /**

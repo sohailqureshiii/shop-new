@@ -13,7 +13,7 @@ import CartPage from "../CartPage/index";
 import AddressForm from "./AddressForm";
 
 import "./style.css";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import Footer from "../../components/Footerr/Footer";
 
 /**
