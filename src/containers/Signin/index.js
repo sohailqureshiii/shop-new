@@ -1,7 +1,7 @@
 import React from "react";
 import { Link }  from "react-router-dom";
 import './style.css'
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 
 const Signin = (props) => {
   return (

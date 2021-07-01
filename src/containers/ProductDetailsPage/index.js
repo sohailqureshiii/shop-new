@@ -9,7 +9,7 @@ import "./style.css";
 import { generatePublicUrl } from "../../urlConfig";
 import { WhatsappShareButton } from "react-share";
 import { WhatsappIcon } from "react-share";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 
 
 /**

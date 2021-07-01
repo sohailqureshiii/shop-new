@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "../../components/UI/Card";
 import { BiRupee } from "react-icons/bi";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import Footer from "../../components/Footerr/Footer";
 import './style.css'
 

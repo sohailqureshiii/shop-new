@@ -29,7 +29,7 @@ const Product = (props) => {
                     <img
                       sizes="404px"
                       style={{ padding: "10px" }}
-                      src="https://images-eu.ssl-images-amazon.com/images/I/41E5Bva7sOL._AC_SX184_.jpg"
+                      src="https://m.media-amazon.com/images/I/71gD8WdSlaL._AC_UY218_.jpg"
                       alt="new"
                       loading="lazy"
                       class="ProjectCoverNeue-image-1MZ js-cover-image"

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Navigationbar from "../Navbar";
+import Navigationbar from "../../components/Navbar";
 import { Link } from 'react-router-dom';
 
 const StoreForm = () => {

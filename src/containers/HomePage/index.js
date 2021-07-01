@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
-import Navigationbar from "../Navbar";
-import Footer from '../../components/Footerr/Footer'
+import Navigationbar from "../../components/Navbar";
+import Footer from "../../components/Footerr/Footer";
 import Product from "../../components/Product";
 
 /**
@@ -10,30 +10,31 @@ import Product from "../../components/Product";
  **/
 
 const HomePage = (props) => {
-
-
   const renderProduct = () => {
-    
-      return (
-        <div style={{ padding: "30px" }}>
-          <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              
-          </div>
+    return (
+      <div style={{ padding: "30px" }}>
+        <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product /> <Product /><Product /><Product />
+          <Product /> <Product />
+          <Product /> <Product />
+          <Product /> <Product />  <Product />  <Product />
+          <Product />  <Product />   <Product /> <Product /> <Product />
+          <Product /> <Product />   <Product />   <Product />  <Product /> <Product />  <Product />
         </div>
-      );
-    }
-  
+      </div>
+    );
+  };
+
   return (
     <>
       <Navigationbar />
@@ -69,9 +70,7 @@ const HomePage = (props) => {
             <li>
               <a className="router-link-exact-active router-link-active NavigationBar-subcategoryLink-3Ua">
                 <div className="SubCategory-root-mwE SubCategory-active-Sxz NavigationBar-subcategory-2m5">
-                  <select
-                    className="SubCategory-label-30F"
-                  >
+                  <select className="SubCategory-label-30F">
                     <option value="">Category</option>
                   </select>
                 </div>
@@ -88,16 +87,15 @@ const HomePage = (props) => {
                       <path d="M11.407,10.421,8.818,7.832a4.276,4.276,0,1,0-.985.985l2.589,2.589a.7.7,0,0,0,.985-.985ZM2.355,5.352a3,3,0,1,1,3,3,3,3,0,0,1-3-3Z"></path>
                     </svg>
                   </div>
-                      <input
-                        type="search"
-                        name="search"
-                        autocomplete="off"
-                        placeholder="Search…"
-                        aria-label="Search "
-                        className="SearchTypeahead-searchInput-1qk e2e-SearchInput-input"
-                        style={{outline:'none'}}
-                      />
-                   
+                  <input
+                    type="search"
+                    name="search"
+                    autocomplete="off"
+                    placeholder="Search…"
+                    aria-label="Search "
+                    className="SearchTypeahead-searchInput-1qk e2e-SearchInput-input"
+                    style={{ outline: "none" }}
+                  />
                 </div>
                 <button
                   tabIndex="-1"

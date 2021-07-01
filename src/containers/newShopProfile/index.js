@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Product from "../../components/Product";
 import "./style.css";
-import NavBar from "../Navbar";
+import NavBar from "../../components/Navbar";
 import Footer from "../../components/Footerr/Footer";
 
 const StoreProfile = (props) => {
@@ -14,7 +14,7 @@ const StoreProfile = (props) => {
   const renderProduct = () => {
     
     return (
-      <div style={{ padding: "30px" }}>
+      <div >
         <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
             <Product />
             <Product />
@@ -229,8 +229,9 @@ const StoreProfile = (props) => {
                           </div>
                         </div>
                       </div>
-                      <span>Report Store</span>
+                      <span style={{fontWeight:'bold'}}>Report Store</span>                
                       </div>
+                      <span style={{fontSize:'14px'}}>Since 1990</span>
                     </div>
                   </div>
                 </div>
@@ -254,9 +255,9 @@ const StoreProfile = (props) => {
                       </span>
                     </div>
                   </div>
-                  {/* <div className="Profile-tabs-DeN Profile-transitionBackwards-1fh"> */}
+                  <div className="Profile-tabs-DeN Profile-transitionBackwards-1fh">
                   {renderProduct()}
-                  {/* </div> */}
+                  </div>
                 </div>
               </div>
             </main>
