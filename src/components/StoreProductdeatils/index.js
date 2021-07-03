@@ -5,35 +5,10 @@ import { WhatsappShareButton } from "react-share";
 import { WhatsappIcon } from "react-share";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
 
-const ProductModal = (props) => {
+const StoreProdDeatils = (props) => {
   const { show, handleclose } = props;
-  // if (!productDetails) {
-  //   return null;
-  // }
 
-  const diffToast = () => {
-    toast.success("Item Added Successfull !", {
-      position: "top-center",
-    });
-  };
-
-  const renderButton = (storeId) => {
-    return (
-      <button
-        style={{ marginLeft: "263px", fontSize:'16px',height:'28px' , marginTop:'16px'}}
-        className="Btn-button-BGn Btn-primary-1H3 Btn-normal-hI4 js-adobeid-signup e2e-PrimaryNav-signup PrimaryNav-a11yButton-2Cl"
-      >
-        <span> Follow Store</span>
-      </button>
-    );
-  };
-
-  // const { productDetails, show, handleclose } = props;
-  // if (!productDetails) {
-  //   return null;
-  // }
   return (
     <>
       <Modal visible={show} onClose={handleclose} size="lg">
@@ -54,36 +29,14 @@ const ProductModal = (props) => {
           <div className=" detailsWrapper">
             <div className="prodDesc clearfix">
               <div className="productDetails" style={{ width: "600px" }}>
-                <div>
-                  <div
-                    className="Storename"
-                    style={{ maxWidth: "521px", top: "-1px" }}
-                  >
-                    <p style={{display:'flex'}}>
-                      Apple Store
-                      {renderButton()}
-                    </p>
-                    <p
-                      style={{
-                        width: "130px",
-                        fontSize: "12px",
-                        color: "#878787",
-                        fontWeight: "600",
-                        marginRight: "20px",
-                      }}
-                    >
-                      Viman Nagar Pune
-                    </p>
-                  </div>
-                </div>
-                <h1 className="productTitle" style={{ maxWidth: "509px" }}>
+                <p className="productTitle" style={{ maxWidth: "500px" }}>
                   2020 Apple MacBook Pro (13.3-inch/33.78 cm, Apple M1 chip with
                   8‑core CPU and 8‑core GPU, 8GB RAM, 256GB SSD) - Space Grey
-                </h1>
-                <div className="flexRow priceContainer price">Price :
-                  <span 
-                  // classNa me="price"
-                  >
+                </p>
+                <div>{/* //// */}</div>
+                <div className="extraOffer">{/* //// */}</div>
+                <div className="flexRow priceContainer">
+                  <span className="price">
                     <BiRupee />
                     1,00,000
                   </span>
@@ -91,7 +44,13 @@ const ProductModal = (props) => {
                   {/* <span>i</span> */}
                 </div>
                 <div>
-                  <p style={{ display: "flex", maxWidth: "500px" }}>
+                  <p
+                    style={{
+                      display: "flex",
+                      maxWidth: "500px",
+                      minHeight: "122px",
+                    }}
+                  >
                     <span
                       style={{
                         width: "100px",
@@ -122,29 +81,40 @@ const ProductModal = (props) => {
                     </span>
                   </p>
                   <div className="share-btn-container">
-                  <div
+                    <WhatsappShareButton
+                      // title={productDetails.name}
+                      separator=" "
+                      //   url={currentUrl}
+                    >
+                      <WhatsappIcon
+                        logoFillColor="green"
+                        round={true}
+                        // title={productDetails.name}
+                        separator=" "
+                        // url={currentUrl}
+                      ></WhatsappIcon>
+                    </WhatsappShareButton>
+                  </div>
+                </div>
+              </div>
+              <div
                 id="addButtons"
-                style={{ float: "left", width: "100%", marginLeft: "0px" }}
+                style={{ float: "left", width: "100%", marginLeft: "12px" }}
               >
                 <div className="addToBagBtn  fixedCartBtnWrapper">
                   <div className="addButtons col-xs-12 pull-left">
                     <button
                       id="testWishButton"
                       className="addtocart pull-left "
-                      onClick={diffToast}
                     >
-                      <span>ADD TO Cart</span>
+                      <span>Edit</span>
                     </button>
                     <button id="addToCart" className="wishlists pull-left ">
-                      <span>SHARE</span>
+                      <span>Delete</span>
                     </button>
                   </div>
                 </div>
               </div>
-                  </div>
-                </div>
-              </div>
-              
             </div>
           </div>
         </div>
@@ -154,4 +124,4 @@ const ProductModal = (props) => {
   );
 };
 
-export default ProductModal;
+export default StoreProdDeatils;
