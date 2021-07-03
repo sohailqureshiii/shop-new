@@ -42,7 +42,9 @@ const DashBoard = (props) => {
               </ul>
             </div>
           </div>
-          <Navigationbar></Navigationbar>
+          <div style={{paddingLeft:'200px'}}>
+          {props.children}
+          </div>
         </div>
       ) : (
         props.children
