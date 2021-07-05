@@ -21,9 +21,9 @@ import ProductDetailsPage from "./containers/ProductDetailsPage";
 // import CheckoutPage from "./containers/CheckoutPage";
 import StoreCoustomers from "./containers/StoreContainers/StoreCoustomers";
 import StoreProfile from "./containers/StoreContainers/StoreProfile";
+import StoreAddProduct from "./containers/StoreContainers/AddProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLoggedIn } from "./actions/auth.action";
-
 
 function App() {
 
@@ -61,6 +61,7 @@ function App() {
           {/* <Route path="/checkout" exact component={CheckoutPage} /> */}
           <Route path="/storeCoustomer" exact component={StoreCoustomers} />
           <Route path="/storeProfile" exact component={StoreProfile} />
+          <Route path="/Addproduct" exact component={StoreAddProduct} />
         </Switch>
       </Router>
     </div>

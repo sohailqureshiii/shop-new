@@ -1,0 +1,198 @@
+
+
+header.MuiPaper-root {
+    background-color: #fff;
+    color: #1a181e;
+    box-shadow: none;
+    border-bottom: 1px solid #d9d9d9;
+}
+@media (min-width: 600px){.app-layout .main-header {
+    width: calc(100% - 224px);
+    margin-left: 224px;
+}}
+
+
+.MuiAppBar-colorInherit {
+    color: inherit;
+}
+.MuiAppBar-positionFixed {
+    top: 0;
+    left: auto;
+    right: 0;
+    position: fixed;
+}
+
+.MuiAppBar-root {
+    width: 100%;
+    display: flex;
+    z-index: 99;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.njdkjnj{
+    padding: 16px 32px;
+    height: 80px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+
+@media (min-width: 600px){
+    .MuiToolbar-regular {
+        min-height: 64px;
+    }
+}
+
+
+@media (min-width: 0px) and (orientation: landscape){
+    .MuiToolbar-regular {
+        min-height: 48px;
+    }
+    
+}
+
+.MuiToolbar-regular {
+    min-height: 56px;
+}
+@media (min-width: 600px){
+    .MuiToolbar-gutters {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+}
+
+.MuiToolbar-gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.MuiToolbar-root {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.mnjhfderyuvswf{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #1a181e;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    background-color: #fff;
+    color: #1a181e;
+    box-shadow: none;
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 10%), 0px 4px 5px 0px rgb(0 0 0 / 10%), 0px 1px 10px 0px rgb(0 0 0 / 1%);
+}
+.section-text-3{color: #222; 
+    padding-left: 20px;
+    color: #1a181e;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+
+} 
+
+/* ////////// form ////////// */
+
+.app-layout .app-layout-content {
+    margin-left: 223px;
+    background-color: #f7f7f7;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    height: 100%;
+    min-height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+.p3222 {
+    padding: 32px;
+    padding-right: 35%;
+    
+}
+
+.catalog-products, .fill-available {
+    width: 100%;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
+
+.product-information-section {
+    margin-bottom: 32px;
+    padding: 24px 24px 2px;
+}
+.graphics-header, .section-text-5 {
+    line-height: 24px;
+    font-weight: 600;
+}
+.mb24, .my24 {
+    margin-bottom: 24px;
+}
+
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.product-information-section .form-group:not(.textarea-wrap) {
+    margin-bottom: 24px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group .field-label {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4d4d4d;
+    margin-bottom: 8px;
+}
+
+.form-group .form-color-select, .form-group input, .form-group textarea {
+    border-radius: 4px;
+    padding: 11px 16px;
+    border: 1px solid #d9d9d9;
+    width: 100%;
+    color: #1a181e;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+
+.SpinnerButton .label-of-product-addd {
+width: auto;
+}
+.label-of-product-addd {
+-ms-flex-item-align: center;
+-ms-grid-row-align: center;
+-webkit-align-self: center;
+align-self: center;
+-ms-grid-column-align: center;
+justify-self: center;
+text-align: center;
+width: 100%;
+}
+
+input{
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    
+
+}
