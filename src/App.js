@@ -1,6 +1,8 @@
+import React, { useEffect } from "react";
 import "./App.css";
 import HomePage from "./containers/HomePage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PrivateRoute from "./components/HOC/PrivateRoute";
 import ExploreStore from "./containers/ExploreStore";
 import ShopProfile from "./containers/newShopProfile";
 import Signin from "./containers/Signin";
@@ -21,30 +23,42 @@ import ProductDetailsPage from "./containers/ProductDetailsPage";
 import StoreCoustomers from "./containers/StoreContainers/StoreCoustomers";
 import StoreProfile from "./containers/StoreContainers/StoreProfile";
 import StoreAddProduct from "./containers/StoreContainers/AddProduct";
-
+import { useDispatch, useSelector } from "react-redux";
+import { isUserLoggedIn } from "./actions/auth.action";
 
 function App() {
+
+  const dispatch = useDispatch();
+  const auth = useSelector(state => state.auth)
+
+  useEffect(() => {
+    if (!auth.authenticate) {
+      dispatch(isUserLoggedIn());
+    }
+
+  },[]);
+
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/ExploreStore" exact component={ExploreStore} />
-          <Route path="/:storeId/store" exact component={ShopProfile} />
+          <PrivateRoute path="/" exact component={HomePage} />
+          <PrivateRoute path="/ExploreStore" exact component={ExploreStore} />
+          <PrivateRoute path="/:storeId/store" exact component={ShopProfile} />
           <Route path="/Signin" exact component={Signin} />
           <Route path="/Signup" exact component={Signup} />
-          <Route path="/account/orders" exact component={OrderPage} />
-          <Route path="/Orderpage" exact component={OrderDeatilsP} />
-          <Route path="/favorite" exact component={Favorite} />
-          <Route path="/plansection" exact component={Planselection} />
-          <Route path="/myprofile" exact component={MyProfile} />
-          <Route path="/cart" exact component={CartPage} />
-          <Route path="/editprofile" exact component={EditProfile} />
-          <Route path="/storeForm" exact component={StoreForm} />
-          <Route path="/storeDashboard" exact component={StoreDasboard} />
-          <Route path="/storeProduct" exact component={StoreProduct} />
-          <Route path="/storeOrder" exact component={StoreOrder} />
-          <Route path="/:productSlug/:productId/p" component={ProductDetailsPage}/>
+          <PrivateRoute path="/account/orders" exact component={OrderPage} />
+          <PrivateRoute path="/Orderpage" exact component={OrderDeatilsP} />
+          <PrivateRoute path="/favorite" exact component={Favorite} />
+          <PrivateRoute path="/plansection" exact component={Planselection} />
+          <PrivateRoute path="/myprofile" exact component={MyProfile} />
+          <PrivateRoute path="/cart" exact component={CartPage} />
+          <PrivateRoute path="/editprofile" exact component={EditProfile} />
+          <PrivateRoute path="/storeForm" exact component={StoreForm} />
+          <PrivateRoute path="/storeDashboard" exact component={StoreDasboard} />
+          <PrivateRoute path="/storeProduct" exact component={StoreProduct} />
+          <PrivateRoute path="/storeOrder" exact component={StoreOrder} />
+          <PrivateRoute path="/:productSlug/:productId/p" component={ProductDetailsPage}/>
           {/* <Route path="/checkout" exact component={CheckoutPage} /> */}
           <Route path="/storeCoustomer" exact component={StoreCoustomers} />
           <Route path="/storeProfile" exact component={StoreProfile} />
