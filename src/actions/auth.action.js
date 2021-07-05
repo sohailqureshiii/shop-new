@@ -60,16 +60,19 @@ export const signUpAction = userData => dispatch => {
   axiosIntance
     .post("/signup", userData)
     .then(res => {
-      const { message } = res.data;
+      const { token, user } = res.data;
+       localStorage.setItem("token", token);
+       localStorage.setItem("user", JSON.stringify(user));
        dispatch({
-         type: authConstants.SIGNUP_SUCCESS,
+         type: authConstants.LOGIN_SUCCESS,
          payload: {
-          message
+           token,
+           user
         }
        });
     }).catch(error =>{    
       dispatch({
-         type: authConstants.SIGNUP_FAILURE,
+         type: authConstants.LOGIN_FAILURE,
          payload: {error:"User already registered"}
         });
     }

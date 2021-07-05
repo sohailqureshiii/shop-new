@@ -8,6 +8,8 @@ import Storeicon from "../../img/shop.png";
 import Homeicon from "../../img/home.png";
 import Wishlisticon from "../../img/heart.png";
 import { useDispatch, useSelector } from "react-redux";
+import Signin from "../../containers/Signin"
+import Signup from "../../containers/SignUp"
 
 /**
  * @author
@@ -17,6 +19,10 @@ import { useDispatch, useSelector } from "react-redux";
 const Navigationbar = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   const auth = useSelector((state) => state.auth);
+  const [showLoginModal,setShowLoginModal] = useState(false);
+  const [showSigupModal,setShowSigupModal] = useState(false);
+  
+
 
   const dispatch = useDispatch();
 
@@ -68,31 +74,33 @@ const Navigationbar = (props) => {
       <DropdownMenu
         menu={
           <li className="PrimaryNav-loggedOutOption-3xV">
-            <Link
-            >
+            {/* <Link
+            > */}
               <div className="PrimaryNav-a11yButtonWrap-23Z">
-              <Link to='/Signin'> 
-              <button className="Btn-button-BGn Btn-primary-1H3 Btn-normal-hI4 js-adobeid-signup e2e-PrimaryNav-signup PrimaryNav-a11yButton-2Cl">
+              {/* <Link to='/Signin'>  */}
+              <button className="Btn-button-BGn Btn-primary-1H3 Btn-normal-hI4 js-adobeid-signup e2e-PrimaryNav-signup PrimaryNav-a11yButton-2Cl"
+               onClick = {()=>setShowLoginModal(true)}
+              >
                   <div className="Btn-labelWrapper-1jS">
                     <div className="Btn-label-1Zf e2e-Btn-label"> Log In</div>
                   </div>
                 </button>
-              </Link>
+              {/* </Link> */}
                 <span className="PrimaryNav-a11yButtonHelper-3Vx"></span>
               </div>
-            </Link>
+            {/* </Link> */}
           </li>
         }
         menus={[{ label: "Shopisthan About us", href: "", icon: null }]}
         firstMenu={
           <div className="firstmenu">
             <span>New Customer?</span>
-            <Link
+            <button
               style={{ color: "#2874f0" }}
-              to='/Signup'
+              onClick = {() => setShowSigupModal(true) }
             >
               Sign Up
-            </Link>
+            </button>
           </div>
         }
       />
@@ -165,7 +173,7 @@ const Navigationbar = (props) => {
         </ul>
         <div className="PrimaryNav-signup-Yf6">
           <ul className="PrimaryNav-loggedOutOptions-1SQ">
-            { renderLoggedInMenu() }
+            {auth.authenticate ? renderLoggedInMenu(): renderNonLoggedInMenu() }
           </ul>
         </div>
         <button
@@ -179,6 +187,18 @@ const Navigationbar = (props) => {
           )}
         </button>
       </nav>
+{/* 
+    <Signin 
+      Modal
+      show={showLoginModal}
+      handleclose={()=>setShowLoginModal(false)}
+    /> */}
+{/* 
+     <Signup
+      Modal
+      show={showSigupModal}
+      handleclose={()=>setShowSigupModal(false)}
+    /> */}
     </>
   );
 };

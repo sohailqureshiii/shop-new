@@ -36,6 +36,7 @@ export default (state = initState, action) => {
                 authenticate: true,
                 authenticating: false,
                 errorTF:false,
+                error:""
             }
             break;
         case authConstants.LOGOUT_REQUEST:

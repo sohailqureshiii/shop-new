@@ -3,31 +3,30 @@ import { Link, Redirect } from "react-router-dom";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { googleLoginAction, loginAction } from "../../actions/auth.action";
-import GoogleLogin from 'react-google-login'
-import axios from "axios";
-import { api } from "../../urlConfig";
+import GoogleLogin from "react-google-login";
+import { Modal } from "../../components/MaterialUI";
+import Signup from "../SignUp";
 
 const Signin = (props) => {
+  const { show, handleclose } = props;
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
-  const [show, setShow] = useState(false);
+  const [showSigupModal, setShowSigupModal] = useState(false);
   const [err, setErr] = useState("");
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
-  
-
 
   useEffect(() => {
-    if (auth.errorTF && loginId && password && show ) {
+    if (auth.errorTF && loginId.length > 10 && password.length > 6) {
       setErr("Invalid credentials");
     }
   });
+
   if (auth.authenticate) {
-    return <Redirect to={`/`} />;
+    return props.Modal ? null : <Redirect to={`/storeForm`} />;
   }
 
   const login = (e) => {
-    setShow(true)
     e.preventDefault();
 
     if (loginId === "" || password === "") {
@@ -42,60 +41,40 @@ const Signin = (props) => {
 
     dispatch(loginAction({ loginId, password }));
   };
-  
-  // const responseSuccessGoogle = (response) =>{
-  //   console.log(response);
-  //   // axios({
-  //   //   method:"POST",
-  //   //   // url: `${api}/googlelogin`
-  //   //   url:api+"/googlelogin",
-  //   //   data:{tokenId:response.tokenId}
-  //   // }).then(response=>{
-  //   //   console.log(response);
-  //   // }).catch(error =>{
-  //   //   console.log(error);
-  //   // })
-  // }
 
-  const responseSuccessGoogle = response => {
-    console.log(response);
-
-    dispatch(googleLoginAction({idToken:response.tokenId}))
-    // axios({
-    //   method: 'POST',
-    //   url: `${api}/google-login`,
-    //   data: { idToken: response.tokenId }
-    // })
-    //   .then(response => {
-    //     console.log('GOOGLE SIGNIN SUCCESS', response);
-    //     // inform parent component
-    //     // informParent(response);
-    //   })
-    //   .catch(error => {
-    //     console.log('GOOGLE SIGNIN ERROR', error.response);
-    //   });
-
-    }
+  const responseSuccessGoogle = (response) => {
+    dispatch(googleLoginAction({ idToken: response.tokenId }));
+  };
 
   const responseErrorGoogle = (error) => {
-    console.log("Error",error);
-  }
+    setErr("Google login failed. Try again");
+  };
 
-  return (
-    <>
-      {/* <NavBar/> */}
+  const renderLoginForm = () => {
+    return (
       <div className="CardLayout-Toaster-Container">
         <section className="CardLayout">
           <header className="CardLayout__header">
             <h1 className="spectrum-Heading1">Sign In</h1>
             <p className="EmailPage__instructions">
               New User ?
-              <Link
-                className="spectrum-Link EmailPage__create-account-link"
-                to="/Signup"
-              >
-                Creat an Account
-              </Link>
+              {props.Modal ? (
+                <button
+                  // onClick={() => {
+                  //   setShowSigupModal(true);
+                  //   handleclose(false);
+                  // }}
+                >
+                  Creat an Account
+                </button>
+              ) : (
+                <Link
+                  className="spectrum-Link EmailPage__create-account-link"
+                  to="/Signup"
+                >
+                  Creat an Account
+                </Link>
+              )}
             </p>
           </header>
           <section className="CardLayout__content">
@@ -131,7 +110,6 @@ const Signin = (props) => {
                   <span className="spectrum-Button-label">Submit</span>
                 </button>
               </section>
-              {err}
             </form>
           </section>
           <GoogleLogin
@@ -139,10 +117,29 @@ const Signin = (props) => {
             buttonText="Login with Google"
             onSuccess={responseSuccessGoogle}
             onFailure={responseErrorGoogle}
-            cookiePolicy={'single_host_origin'}
+            cookiePolicy={"single_host_origin"}
           />
         </section>
+        {err}
       </div>
+    );
+  };
+
+  return (
+    <>
+      {props.Modal ? (
+        <Modal visible={show} onClose={() => handleclose(false)}>
+          {renderLoginForm()}
+        </Modal>
+      ) : (
+        renderLoginForm()
+      )}
+
+      <Signup
+        Modal
+        show={showSigupModal}
+        handleclose={() => setShowSigupModal(false)}
+      />
     </>
   );
 };
