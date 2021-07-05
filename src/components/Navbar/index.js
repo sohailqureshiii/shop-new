@@ -187,8 +187,8 @@ const Navigationbar = (props) => {
           )}
         </button>
       </nav>
-
-    {/* <Signin 
+{/* 
+    <Signin 
       Modal
       show={showLoginModal}
       handleclose={()=>setShowLoginModal(false)}
