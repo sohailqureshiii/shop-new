@@ -18,6 +18,15 @@ const Navigationbar = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   const auth = useSelector((state) => state.auth);
 
+  const dispatch = useDispatch();
+
+
+  const logout = () => {
+    // dispatch(signout());
+  }
+
+
+
   const renderLoggedInMenu = () => {
     return (
       <DropdownMenu
@@ -36,7 +45,7 @@ const Navigationbar = (props) => {
                 }}
                 alt="Shopisthan Logo"
               />
-              <span style={{ fontSize: 15 }}> Sohail</span>
+              <span style={{ fontSize: 15 }}> {auth.user.name}</span>
           </div>
           </Link>
         }
@@ -48,7 +57,7 @@ const Navigationbar = (props) => {
             icon: null,
           },
           { label: "Create Store", href: "/storeForm", icon: null,  },
-          { label: "Logout", href: "", icon: null,  },
+          { label: "Logout", href: "", icon: null,onClick: logout  },
           { label: "Store Dashboard", href: "/storeDashboard", icon: null,  },
         ]}
       />
