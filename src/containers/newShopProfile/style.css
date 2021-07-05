@@ -325,7 +325,7 @@ svg:not(:root) {
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 200;
   line-height: 1;
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;

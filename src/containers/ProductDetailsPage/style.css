@@ -29,7 +29,7 @@
 }
 .productDescImgContainer{
     width: 355px;
-    height: 440px;
+    height: 385px;
     overflow: hidden;
     text-align: center;
     border: 1px solid #f0f0f0;
@@ -63,9 +63,9 @@
     margin: 0 10px;
 }
 .productDetails .productTitle{
-    font-size: 18px;
+    font-size: 15px;
     color: #212121;
-    font-weight: 400;
+    font-weight: 500;
 }
 .ratingCount{
     display: inline-block;
@@ -93,7 +93,7 @@
     align-items: center;
 }
 .price{
-    font-size: 28px;
+    font-size: 17px;
     font-weight: 600;
     display: flex;
     align-items: center;
