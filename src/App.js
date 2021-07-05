@@ -22,9 +22,9 @@ import ProductDetailsPage from "./containers/ProductDetailsPage";
 // import CheckoutPage from "./containers/CheckoutPage";
 import StoreCoustomers from "./containers/StoreContainers/StoreCoustomers";
 import StoreProfile from "./containers/StoreContainers/StoreProfile";
+import StoreAddProduct from "./containers/StoreContainers/AddProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLoggedIn } from "./actions/auth.action";
-
 
 function App() {
 
@@ -60,8 +60,9 @@ function App() {
           <PrivateRoute path="/storeOrder" exact component={StoreOrder} />
           <PrivateRoute path="/:productSlug/:productId/p" component={ProductDetailsPage}/>
           {/* <Route path="/checkout" exact component={CheckoutPage} /> */}
-          <PrivateRoute path="/storeCoustomer" exact component={StoreCoustomers} />
-          <PrivateRoute path="/storeProfile" exact component={StoreProfile} />
+          <Route path="/storeCoustomer" exact component={StoreCoustomers} />
+          <Route path="/storeProfile" exact component={StoreProfile} />
+          <Route path="/Addproduct" exact component={StoreAddProduct} />
         </Switch>
       </Router>
     </div>
