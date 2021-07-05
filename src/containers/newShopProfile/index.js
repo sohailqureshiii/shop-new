@@ -15,7 +15,7 @@ const StoreProfile = (props) => {
     
     return (
       <div >
-        <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
+        <div className="lkmnjoirkee Galleries-grid-1Bv Galleries-header-14v">
             <Product />
             <Product />
             <Product />
