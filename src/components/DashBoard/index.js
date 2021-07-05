@@ -6,6 +6,7 @@ import Homeicon from "../../img/home.png";
 import products from "../../img/icons8-product-24.png"
 import orders from "../../img/icons8-shopping-bag-50 (1).png"
 import customers from "../../img/cutomers.png"
+import Profilepiclogo from "../../img/icons8-male-user-50.png";
 
 const DashBoard = (props) => {
   return (
@@ -14,6 +15,17 @@ const DashBoard = (props) => {
         <div>
           <div className="sidebar">
             <div className="sidebar-menu">
+
+            <h3 className="logo">
+          <li className="PrimaryNav-coreNavigationItem-236 PrimaryNav-home-2zH">
+            <a href="/" className="PrimaryNav-coreNavigationLink-2uv">
+              <div className="PrimaryNav-logoWrap-564">
+                <span>Shopisthan</span>
+              </div>
+            </a>
+          </li>
+        </h3>
+
               <ul>
                 <li>
                   <NavLink exact activeClassName="active" to="/storeDashboard">
@@ -37,6 +49,12 @@ const DashBoard = (props) => {
                   <NavLink exact activeClassName="active" to="/storeOrder">
                   <img src={orders} className="dashicon-icon" />
                     <span class="las la-shopping-bag"></span> <span>Order</span>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink exact activeClassName="active" to="/storeProfile">
+                  <img src={Profilepiclogo} className="dashicon-icon" />
+                    <span class="las la-shopping-bag"></span> <span>Account</span>
                   </NavLink>
                 </li>
               </ul>

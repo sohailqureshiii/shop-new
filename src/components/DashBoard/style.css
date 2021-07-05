@@ -23,6 +23,7 @@
   z-index: 100;
   transition: width 300ms;
   /* background-color: aqua; */
+  z-index: 100;
 
 }
 
@@ -30,7 +31,6 @@
     height: 90px;
     padding: 1rem 0rem 1rem 2rem;
     color: #fff;
-    /* background-color: blue; */
 }
 .sidebar-brand span{
  display: inline-block;
@@ -38,12 +38,12 @@
 
 }
 .sidebar-menu{
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .sidebar-menu li{
     width: 100%;
-    margin-bottom: 1.7rem;
+    margin-bottom: 2.7rem;
 }
 .sidebar-menu a{
     padding-left: 1rem;
@@ -52,10 +52,10 @@
     font-size: 1.1rem;
 }
 .sidebar-menu a.active{
-    background: rgb(216, 216, 216);
+    background: rgb(95 95 95);
     padding-top:1rem;
     padding-bottom: 1rem;
-    color: var(--main-color);
+    color: #ffffff
 }
 .sidebar-menu a span:first-child{
     font-size: 1.5rem;
