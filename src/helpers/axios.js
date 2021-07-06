@@ -1,39 +1,64 @@
+// import React, { useEffect } from "react";
+// import { useSelector,useDispatch } from 'react-redux';
 import axios from 'axios';
 import { api } from '../urlConfig';
-import store from "../store";
+// import { useEffect } from 'react';
 
-const token = window.localStorage.getItem('token');
+   // window.location.reload();
+
+// const token = window.localStorage.getItem('token');
+
+// useEffect(()=>{
+//    if(!token){
+//     auth = useSelector((state)=>state.auth);
+//     token = auth.token
+//    }
+   
+//    // cosnt auth = useSelector((state)=>state.auth);
+//  },[])
+ 
+
+// const auth ="";
+
+// // if(!token){
+  
+// // }
+
+
+
 
 const axiosIntance = axios.create({
+   
+   // const auth = useSelector((state=>state.auth)),
+   // // if(token){
+
+   // //   return token = auth.token
+   // //  },
    baseURL: api,
-   headers:{
-    //  'Authorization': token ? `Bearer ${token}` : ""
-     'Authorization': token ? "Bearer " + token : ""
-   }
+   // headers: {
+   //    'Content-Type': 'application/json',
+   //  },
+   // headers:{
+   //  //  'Authorization': token ? `Bearer ${token}` : ""
+   //   'Authorization': token ? "Bearer " + token : ""
+   // }
 });
 
-// axiosIntance.interceptors.request.use((req) => {
-//    const { auth } = store.getState();
-//    if (auth.token) {
-//      req.headers.Authorization = `Bearer ${auth.token}`;
-//    }
-//    return req;
-//  });
+
+axiosIntance.interceptors.request.use(
+   config => {
+     const token = window.localStorage.getItem('token');
  
-//  axiosIntance.interceptors.response.use(
-//    (res) => {
-//      return res;
-//    },
-//    (error) => {
-//      console.log(error.response);
-//      const status = error.response ? error.response.status : 500;
-//      if (status && status === 500) {
-//        localStorage.clear();
-//        store.dispatch({ type: authConstants.LOGOUT_SUCCESS });
-//      }
-//      return Promise.reject(error);
-//    }
-//  );
+     if (token) {
+       config.headers.Authorization = `Bearer ${token}`;
+     } else {
+       delete axiosIntance.defaults.headers.common.Authorization;
+     }
+     return config;
+   },
+ 
+   error => Promise.reject(error)
+ );
  
 
 export default axiosIntance;

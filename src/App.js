@@ -24,6 +24,7 @@ import StoreProfile from "./containers/StoreContainers/StoreProfile";
 import StoreAddProduct from "./containers/StoreContainers/AddProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLoggedIn } from "./actions/auth.action";
+import { getInitialData } from "./actions/initialData.action";
 
 function App() {
 
@@ -36,6 +37,11 @@ function App() {
     }
 
   },[]);
+
+  useEffect(()=>{
+    // window.location.reload();
+    dispatch(getInitialData())
+  },[auth.authenticate])
 
   return (
     <div className="App">

@@ -1,6 +1,13 @@
 import React, { useState, useRef } from "react";
+import { useSelector } from "react-redux";
 
 const MenuNavBar = (props) => {
+
+
+  const categoriesList = useSelector((state)=>state.category.categories)
+  const locationList  = useSelector((state)=>state.location.locations)
+
+
   const inputSearch = useRef("");
   const inputLocation = useRef("");
   const inputCategory = useRef("");
@@ -50,16 +57,11 @@ const MenuNavBar = (props) => {
                     >
                       location
                     </option>
-                    <option value="1">Loca1</option>
-                    <option value="2">Loc2</option>
-                    <option value="5">Loc5</option>
-                    <option value="3">Loc3</option>
-
-                    {/* {location.map((value) => (
+                    {locationList.map((value) => (
                       <option key={value._id} value={value._id}>
                         {value.name}
                       </option>
-                    ))} */}
+                    ))}
                   </select>
                 </div>
               </a>
@@ -78,15 +80,13 @@ const MenuNavBar = (props) => {
                     value={props.categoryterm}
                     onChange={getCategoryTerm}
                   >
-                    <option value="cat1">Category</option>
-                    <option value="231">Categor2312y</option>
-                    <option value="123123">Categor23y</option>
-                    <option value="123">Category12</option>
-                    {/* {categoriesList.map((value) => (
+                    <option value="">Category</option>
+                   
+                    {categoriesList.map((value) => (
                       <option key={value._id} value={value._id}>
                         {value.name}
                       </option>
-                    ))} */}
+                    ))}
                   </select>
                 </div>
               </a>

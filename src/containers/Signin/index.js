@@ -50,6 +50,11 @@ const Signin = (props) => {
     setErr("Google login failed. Try again");
   };
 
+  const viewChanges = () =>{
+    handleclose(false)
+    setShowSigupModal(true)
+  }
+
   const renderLoginForm = () => {
     return (
       <div className="CardLayout-Toaster-Container">
@@ -58,16 +63,14 @@ const Signin = (props) => {
             <h1 className="spectrum-Heading1">Sign In</h1>
             <p className="EmailPage__instructions">
               New User ?
-              {props.Modal ? (
-                <button
-                  // onClick={() => {
-                  //   setShowSigupModal(true);
-                  //   handleclose(false);
-                  // }}
+              {props.Modal ?  
+               <button
+                  onClick={viewChanges}
                 >
                   Creat an Account
                 </button>
-              ) : (
+            
+               : (
                 <Link
                   className="spectrum-Link EmailPage__create-account-link"
                   to="/Signup"
@@ -135,11 +138,11 @@ const Signin = (props) => {
         renderLoginForm()
       )}
 
-      <Signup
+      {/* <Signup
         Modal
         show={showSigupModal}
         handleclose={() => setShowSigupModal(false)}
-      />
+      /> */}
     </>
   );
 };
