@@ -32,7 +32,7 @@ const HomePage = (props) => {
 
   const renderProduct = () => {
     return (
-      <div style={{ padding: "30px" }}>
+      <div style={{ padding: "30px",paddingTop:'135px' }}>
         <div className="Galleries-covers-ihH Galleries-grid-1Bv Galleries-header-14v">
           <Product />
           <Product />

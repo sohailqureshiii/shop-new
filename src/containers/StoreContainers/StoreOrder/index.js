@@ -1,5 +1,5 @@
 import React from "react";
-import DashBoard from "../../../components/DashBoard";
+import DashBoard from "../../../components/DashBoardSidebar";
 import Navbar from '../../../components/Navbar'
 import SeachCompo from "../../../components/SearchComponent";
 import OrderTableCompo from "../../../components/Tablecomponent/Order table component";

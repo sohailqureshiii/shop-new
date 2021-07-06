@@ -1,11 +1,12 @@
 import React from 'react'
-import DashBoard from '../../../components/DashBoard'
+import DashBoard from '../../../components/DashBoardSidebar'
+import  Navbar  from "../../../components/Navbar";
 
 const StoreCoustomers = () => {
     return (
       <>
+      <Navbar/>
       <DashBoard  sidebar>
-         StoreCoustomers
       </DashBoard>
       </>
     )

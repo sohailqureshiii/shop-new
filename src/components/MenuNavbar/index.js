@@ -17,14 +17,14 @@ const MenuNavBar = (props) => {
   };
   return (
     <>
-      <div style={{ paddingTop: "45px" }}>
+      <div style={{ paddingTop: "45px",position:'fixed', width:'100%', zIndex:'99' }}>
         <nav
           className="NavigationBar-subcategoryList-1nX"
           style={{
-            padding: '20px 10px 20px',
+            padding: '15px 10px 15px 79px',
             border: "1px solid #eaeaea",
-            paddingLeft: "79px",
             overflow: "auto",
+            paddingLeft:'79px'
           }}
         >
           <ul style={{ display: "contents" }}>

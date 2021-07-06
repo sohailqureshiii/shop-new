@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import DashBoard from "../../../components/DashBoard";
+import DashBoard from "../../../components/DashBoardSidebar";
 import "./style.css";
 import Navbar from "../../../components/Navbar";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import DashBoard from "../../../components/DashBoard";
+import DashBoard from "../../../components/DashBoardSidebar";
 import SeachCompo from "../../../components/SearchComponent";
 import ProductTableCompo from '../../../components/Tablecomponent/Product table component'
 import { Link } from "react-router-dom";
