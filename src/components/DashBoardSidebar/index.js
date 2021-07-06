@@ -15,17 +15,6 @@ const DashBoard = (props) => {
         <div>
           <div className="sidebar">
             <div className="sidebar-menu">
-
-            <h3 className="logo">
-          <li className="PrimaryNav-coreNavigationItem-236 PrimaryNav-home-2zH">
-            <a href="/" className="PrimaryNav-coreNavigationLink-2uv">
-              <div className="PrimaryNav-logoWrap-564">
-                <span>Shopisthan</span>
-              </div>
-            </a>
-          </li>
-        </h3>
-
               <ul>
                 <li>
                   <NavLink exact activeClassName="active" to="/storeDashboard">

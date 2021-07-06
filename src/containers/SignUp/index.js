@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signUpAction } from "../../actions/auth.action";
 import { Modal } from "../../components/MaterialUI";
 import { googleLoginAction, loginAction } from "../../actions/auth.action";
-import GoogleLogin from "react-google-login";
+import { GoogleLogin }  from "react-google-login";
 import Signin from "../Signin";
 
 const Signup = (props) => {
@@ -22,7 +22,7 @@ const Signup = (props) => {
     if (auth.errorTF && loginId.length > 10 && password.length > 6 ) {
       setErr("User already registered");
     }
-  });
+  }); 
 
   const userSignup = (e) => {
     e.preventDefault();

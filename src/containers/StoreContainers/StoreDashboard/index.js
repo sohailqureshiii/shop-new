@@ -1,15 +1,19 @@
 import React from "react";
-import DashBoard from "../../../components/DashBoard";
+import  Navbar  from "../../../components/Navbar";
+import DashBoard from "../../../components/DashBoardSidebar";
 import SeachCompo from "../../../components/SearchComponent";
-import OrderTableCompo from "../../../components/Tablecomponent/Order table component";
+// import OrderTableCompo from "../../../components/Tablecomponent/Order table component";
 import "./style.css";
 
 const StoreDasboard = () => {
   return (
+    <>
+    <Navbar/>
     <DashBoard sidebar>
-      <div className="lkjhasdrfr">
+   
+      <div className="lkjhasdrfr" style={{paddingTop:"80px"}}>
         <h1 className="order-name-name-order">
-          Home
+          Dashboard
           <SeachCompo />
         </h1>
         <div style={{ padding: "30px" }}>
@@ -50,6 +54,7 @@ const StoreDasboard = () => {
         </div>
       </div>
     </DashBoard>
+    </>
   );
 };
 

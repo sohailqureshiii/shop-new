@@ -50,21 +50,22 @@ const Navigationbar = (props) => {
                   marginRight: "4px",
                 }}
                 alt="Shopisthan Logo"
+                
               />
               <span style={{ fontSize: 15 }}> {auth.user.name}</span>
           </div>
           </Link>
         }
         menus={[
-          { label: "Edit Profile", href: "/editprofile", icon: null },
+          { label: "Edit Profile", to: "/editprofile", icon: null },
           {
             label: "Orders",
-            href: "/Orderpage",
+            to: "/Orderpage",
             icon: null,
           },
-          { label: "Create Store", href: "/storeForm", icon: null,  },
-          { label: "Logout", href: "", icon: null,onClick: logout  },
-          { label: "Store Dashboard", href: "/storeDashboard", icon: null,  },
+          { label: "Create Store", to: "/storeForm", icon: null,  },
+          { label: "Logout", to: "", icon: null,onClick: logout  },
+          { label: "Store Dashboard", to: "/storeDashboard", icon: null,  },
         ]}
       />
     );

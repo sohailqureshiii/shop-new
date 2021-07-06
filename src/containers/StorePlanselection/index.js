@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./style.css";
 import NavBar from "../../components/Navbar";
-import Newtable from '../../components/PlanSelection'
+import Newtable from "../../components/PlanSelection";
 
 const Planselection = (props) => {
-
   const [show, setShow] = useState(false);
   const handleShow = () => {
     setShow(true);
@@ -31,7 +30,10 @@ const Planselection = (props) => {
             <div className="grid pricing__cards">
               <div className="grid__item">
                 <div className="pricing-cards__wrapper pricing-cards pricing-cards--skin-light">
-                  <div className="text-center pricing-card--basic pricing-card">
+                  <div
+                    className="text-center pricing-card--basic pricing-card"
+                    onClick={() => handleShow()}
+                  >
                     <h2 className="pricing-card__plan-name text-major heading--4">
                       Basic Shopisthan
                     </h2>
@@ -68,6 +70,18 @@ const Planselection = (props) => {
                           </span>
                         </span>
                       </div>
+                      <div
+                            className="d-flex"
+                            style={{
+                              paddingTop:'20px',
+                              justifyContent:'center'
+                            }}
+
+                          >
+                            <div className="button-group ml16 btn-primary section-text-5 btn-product-new">
+                              <div className="btn-text">Choose Plan</div>
+                            </div>
+                          </div>
                     </div>
                   </div>
                   <div className="text-center pricing-card--professional pricing-card">
@@ -101,6 +115,18 @@ const Planselection = (props) => {
                           </span>
                         </span>
                       </div>
+                      <div
+                            className="d-flex"
+                            style={{
+                              paddingTop:'20px',
+                              justifyContent:'center'
+                            }}
+
+                          >
+                            <div className="button-group ml16 btn-primary section-text-5 btn-product-new">
+                              <div className="btn-text">Choose Plan</div>
+                            </div>
+                          </div>
                     </div>
                   </div>
                   <div className="text-center pricing-card--unlimited pricing-card">
@@ -136,16 +162,25 @@ const Planselection = (props) => {
                         </span>
                       </div>
                     </div>
+                    <div
+                            className="d-flex"
+                            style={{
+                              paddingTop:'20px',
+                              justifyContent:'center'
+                            }}
+
+                          >
+                            <div className="button-group ml16 btn-primary section-text-5 btn-product-new">
+                              <div className="btn-text">Choose Plan</div>
+                            </div>
+                          </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-      <Newtable
-       show={show}
-       handleclose={() => setShow(false)}
-      />
+        <Newtable show={show} handleclose={() => setShow(false)} />
       </main>
     </>
   );
