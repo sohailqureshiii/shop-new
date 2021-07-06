@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import DashBoard from "../../../components/DashBoard";
 import "./style.css";
+import Navbar from "../../../components/Navbar";
 
 const StoreAddProduct = () => {
+  const [categoryId, setCategoryId] = useState("");
+  const [productname, setProductName] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  const [productPictures, setProductPictures] = useState([]);
+
   return (
     <>
+      <Navbar />
       <DashBoard sidebar>
-        <header className="mnjhfderyuvswf">
-          <div className="njdkjnj MuiToolbar-root MuiToolbar-regular header-toolbar MuiToolbar-gutters">
-            <div className="add-prod-hndbdb">
-              <div></div>
-              <div className="d-flex align-center navbar-header" tabIndex="-1">
-                <h2 className="section-text-3">Add New Product</h2>
-              </div>
-              <div className="header-actions"></div>
-            </div>
-          </div>
-        </header>
+        <span style={{paddingTop:'60px'}}>Add Product</span>
         <div
           className="app-layout-content"
           style={{ paddingTop: "20px", paddingBottom: "0px" }}
@@ -28,68 +28,155 @@ const StoreAddProduct = () => {
                   <div className="product-information-section card">
                     <h4 className="section-text-5 mb24">Product Information</h4>
                     <section className="EmailPage__email-field form-group">
-                    <div>
-                      <label className="spectrum-FieldLabel" style={{fontSize:'14px'}}>
-                      Product Name *
-                      </label>
-                      <input
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                        placeholder="Enter Product Name"
-                      ></input>
+                      <div>
+                        <label
+                          className="spectrum-FieldLabel"
+                          style={{ fontSize: "14px" }}
+                        >
+                          Product Name *
+                        </label>
+                        <input
+                          className="spectrum-Textfield spectrum-Textfield--quiet"
+                          placeholder="Enter Product Name"
+                          value={productname}
+                          onChange={(e) => setProductName(e.target.value)}
+                        ></input>
+                      </div>
+                      <div>
+                        <label
+                          className="spectrum-FieldLabel"
+                          style={{ fontSize: "14px" }}
+                        >
+                          Product Category *
+                        </label>
+                        <input
+                          className="spectrum-Textfield spectrum-Textfield--quiet"
+                          placeholder="Enter Product Category"
+                          value={categoryId}
+                          onChange={(e) => setCategoryId(e.target.value)}
+                        ></input>
+                      </div>
+                      <div>
+                        <label
+                          className="spectrum-FieldLabel"
+                          style={{ fontSize: "14px" }}
+                        >
+                          Price *
+                        </label>
+                        <input
+                          className="spectrum-Textfield spectrum-Textfield--quiet"
+                          placeholder="Enter Price"
+                          value={price}
+                          onChange={(e) => setPrice(e.target.value)}
+                        ></input>
+                      </div>
+                      <div>
+                        <label
+                          className="spectrum-FieldLabel"
+                          style={{ fontSize: "14px" }}
+                        >
+                          Discounted Price *
+                        </label>
+                        <input
+                          className="spectrum-Textfield spectrum-Textfield--quiet"
+                          placeholder="Enter Discounted Price"
+                          value={productname}
+                          onChange={(e) => setProductName(e.target.value)}
+                        ></input>
+                      </div>
+                      <div>
+                        <label
+                          className="spectrum-FieldLabel"
+                          style={{ fontSize: "14px" }}
+                        >
+                          Quantity *
+                        </label>
+                        <input
+                          className="spectrum-Textfield spectrum-Textfield--quiet"
+                          placeholder="Enter Quantity"
+                          value={quantity}
+                          onChange={(e) => setQuantity(e.target.value)}
+                        ></input>
+                      </div>
+                      <div>
+                        <label
+                          className="spectrum-FieldLabel"
+                          style={{ fontSize: "14px" }}
+                        >
+                          Description *
+                        </label>
+                        <input
+                          className="spectrum-Textfield spectrum-Textfield--quiet"
+                          placeholder="Enter Description"
+                          value={description}
+                          onChange={(e) => setDescription(e.target.value)}
+                        ></input>
+                      </div>
+                      <div>
+                        <label
+                          className="spectrum-FieldLabel"
+                          style={{ fontSize: "14px" }}
+                        >
+                          Media *
+                        </label>
+                        <div className="_1ARYa">
+                          <div className="Polaris-Card__Section_1b1h1">
+                            <div className="Polaris-Labelled__LabelWrapper_bf6ys">
+                              <div className="Polaris-Label_2vd36">
+                                <label
+                                  id="PolarisDropZone5Label"
+                                  for="PolarisDropZone5"
+                                  class="Polaris-Label__Text_yj3uv"
+                                >
+                                  Upload Product Images
+                                </label>
+                              </div>
+                            </div>
+                            <div
+                              className="Polaris-DropZone_1ehhx Polaris-DropZone--hasOutline_1z0fh Polaris-DropZone--sizeExtraLarge_1akox"
+                              aria-disabled="false"
+                            >
+                              <span className="Polaris-VisuallyHidden_yrtt5">
+                                <input id="PolarisDropZone5"></input>
+                              </span>
+                              <div className="Polaris-DropZone__Container_13mbo">
+                                <div className="_2Rcw0">
+                                  <div className="Polaris-DropZone-FileUpload_1fbjx">
+                                    <div className="Polaris-Stack_32wu2 Polaris-Stack--vertical_uiuuj">
+                                      <div className="Polaris-Stack__Item_yiyol">
+                                        <img
+                                          width="40"
+                                          src="data:image/svg+xml,%3csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 10a10 10 0 11-20 0 10 10 0 0120 0zM5.3 8.3l4-4a1 1 0 011.4 0l4 4a1 1 0 01-1.4 1.4L11 7.4V15a1 1 0 11-2 0V7.4L6.7 9.7a1 1 0 01-1.4-1.4z' fill='%235C5F62'/%3e%3c/svg%3e"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <div className="Polaris-Stack__Item_yiyol">
+                                        <div className="Polaris-DropZone-FileUpload__Button_r99lw">
+                                          Add files
+                                          {/* value={productname}
+                          onChange={(e) => setProductName(e.target.value)} */}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <div
+                      className="d-flex"
+                      style={{
+                        justifyContent: "flex-end",
+                        paddingBottom: "15px",
+                      }}
+                    >
+                      <div className="button-group ml16 btn-primary section-text-5 btn-product-new">
+                        <div className="btn-text">Add Product</div>
+                      </div>
                     </div>
-                    <div>
-                      <label className="spectrum-FieldLabel" style={{fontSize:'14px'}}>
-                      Product Category *
-                      </label>
-                      <input
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                        placeholder="Enter Product Category"
-                      ></input>
-                    </div>
-                    <div style={{display:'flex'}}>
-                    <div>
-                      <label className="spectrum-FieldLabel" style={{fontSize:'14px'}}>
-                      Price *
-                      </label>
-                      <input
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                        placeholder="Enter Price"
-                      ></input>
-                    </div>
-                    <div style={{marginLeft:'50px'}}>
-                      <label className="spectrum-FieldLabel" style={{fontSize:'14px'}}>
-                      Discounted Price *
-                      </label>
-                      <input
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                        placeholder="Enter Discounted Price"
-                      ></input>
-                    </div>
-                    </div>
-                    <div>
-                      <label className="spectrum-FieldLabel" style={{fontSize:'14px'}}>
-                      Quantity  *
-                      </label>
-                      <input
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                        placeholder="Enter Quantity"
-                      ></input>
-                    </div>
-                    <div>
-                      <label className="spectrum-FieldLabel" style={{fontSize:'14px'}}>
-                      Description  *
-                      </label>
-                      <input
-                        className="spectrum-Textfield spectrum-Textfield--quiet"
-                        placeholder="Enter Description"
-                      ></input>
-                    </div>
-                  </section>
-                  <div className='d-flex' style={{justifyContent:'flex-end', paddingBottom:'15px'}}>
-            <div className='button-group ml16 btn-primary section-text-5 btn-product-new'>
-            <div className='btn-text'>Add Product</div>
-            </div>
-            </div>
                   </div>
                 </form>
               </div>
