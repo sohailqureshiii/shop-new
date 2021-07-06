@@ -50,6 +50,7 @@ const Navigationbar = (props) => {
                   marginRight: "4px",
                 }}
                 alt="Shopisthan Logo"
+                
               />
               <span style={{ fontSize: 15 }}> {auth.user.name}</span>
           </div>
