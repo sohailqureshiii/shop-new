@@ -3,13 +3,15 @@ import './style.css'
 import { FacebookShareButton, WhatsappShareButton } from "react-share";
 import { WhatsappIcon,FacebookIcon } from "react-share";
 import {IoMdCreate} from 'react-icons/io'
-import DashBoard from '../../../components/DashBoard'
+import DashBoard from '../../../components/DashBoardSidebar'
+import  Navbar  from "../../../components/Navbar";
 
 const StoreProfile = () => {
     return (
        <>
+       <Navbar/>
         <DashBoard  sidebar>
-        <div>
+        <div style={{paddingTop:'135px'}}>
           <div className="StoreCard__container">
         <div className="StoreCard__row"><img className="Shop__logo"
          src= "https://as1.ftcdn.net/jpg/03/01/31/70/500_F_301317052_ajbJFzcmAbkAUJPW57nj4fevWm4ZlKJB.jpg"
