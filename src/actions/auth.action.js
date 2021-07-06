@@ -6,7 +6,7 @@ export const loginAction = userData => dispatch => {
     .post("/signin", userData)
     .then(res => {
       const { token, user } = res.data;
-      localStorage.setItem("token", token);
+       localStorage.setItem("token", token);
        localStorage.setItem("user", JSON.stringify(user));
        dispatch({
          type: authConstants.LOGIN_SUCCESS,
@@ -33,7 +33,7 @@ export const googleLoginAction = tokenId => dispatch => {
     .post("/google-login", tokenId)
     .then(res => {
       const { token, user } = res.data;
-      localStorage.setItem("token", token);
+       localStorage.setItem("token", token);
        localStorage.setItem("user", JSON.stringify(user));
        dispatch({
          type: authConstants.LOGIN_SUCCESS,
@@ -42,6 +42,7 @@ export const googleLoginAction = tokenId => dispatch => {
            user
         }
        });
+      //  isUserLoggedIn()
     })
 
     .catch(error =>{    

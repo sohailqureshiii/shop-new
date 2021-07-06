@@ -31,7 +31,7 @@ const Navigationbar = (props) => {
     // dispatch(signout());
   }
 
-
+  
 
   const renderLoggedInMenu = () => {
     return (
@@ -153,7 +153,7 @@ const Navigationbar = (props) => {
                 <div class="link-background">
                   <img src={Wishlisticon} className="homepagenavbar-icon" />
                   <a href="" class="middle">
-                    Favorite
+                    Favorite 1
                   </a>
                 </div>
               </h3>
@@ -188,18 +188,18 @@ const Navigationbar = (props) => {
           )}
         </button>
       </nav>
-{/* 
+
     <Signin 
       Modal
       show={showLoginModal}
       handleclose={()=>setShowLoginModal(false)}
-    /> */}
-{/* 
+    />
+
      <Signup
       Modal
       show={showSigupModal}
       handleclose={()=>setShowSigupModal(false)}
-    /> */}
+    />
     </>
   );
 };

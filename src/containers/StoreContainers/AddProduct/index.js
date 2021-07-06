@@ -6,7 +6,7 @@ import Navbar from "../../../components/Navbar";
 
 const StoreAddProduct = () => {
   const [categoryId, setCategoryId] = useState("");
-  const [productname, setProductName] = useState("");
+  const [productName, setProductName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
@@ -38,7 +38,7 @@ const StoreAddProduct = () => {
                         <input
                           className="spectrum-Textfield spectrum-Textfield--quiet"
                           placeholder="Enter Product Name"
-                          value={productname}
+                          value={productName}
                           onChange={(e) => setProductName(e.target.value)}
                         ></input>
                       </div>
@@ -80,7 +80,7 @@ const StoreAddProduct = () => {
                         <input
                           className="spectrum-Textfield spectrum-Textfield--quiet"
                           placeholder="Enter Discounted Price"
-                          value={productname}
+                          value={productName}
                           onChange={(e) => setProductName(e.target.value)}
                         ></input>
                       </div>
@@ -153,7 +153,7 @@ const StoreAddProduct = () => {
                                       <div className="Polaris-Stack__Item_yiyol">
                                         <div className="Polaris-DropZone-FileUpload__Button_r99lw">
                                           Add files
-                                          {/* value={productname}
+                                          {/* value={productName}
                           onChange={(e) => setProductName(e.target.value)} */}
                                         </div>
                                       </div>

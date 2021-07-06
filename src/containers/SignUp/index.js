@@ -55,6 +55,10 @@ const Signup = (props) => {
     return props.Modal ? null : <Redirect to={`/storeForm`} />;
   }
 
+  const viewChanges = () =>{
+    handleclose(false)
+    setShowLoginModal(true)
+  }
 
   const renderSignUpForm = () =>{
     return(
@@ -67,10 +71,10 @@ const Signup = (props) => {
             {
               props.Modal ? 
               <button
-                  // onClick={() => {
-                  //   setShowLoginModal(true);
-                  //   handleclose(false);
-                  // }}
+                  onClick={viewChanges}
+                    // setShowLoginModal(true)
+                    // handleclose(false)
+                  
                 >
                  Login
                 </button>
