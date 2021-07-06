@@ -58,7 +58,7 @@ function App() {
 
   useEffect(() => {
     if (auth.authenticate && auth.user.store === "Yes") {
-       dispatch
+      
     }
   }, [auth.authenticate]);
 
