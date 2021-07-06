@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 /**
@@ -14,7 +15,7 @@ const Modal = (props) => {
     <>
       <div className="modalFixedBg">
         <div style={{ position: "relative" }}>
-          <div className="modalClose" onClick={props.onClose} >
+          <div className="modalClose" onClick={props.onClose}>
             X
           </div>
           <div className="modalContainer">{props.children}</div>
@@ -23,7 +24,6 @@ const Modal = (props) => {
     </>
   );
 };
-
 
 const MaterialInput = (props) => {
   const [focus, setFocus] = useState(props.value === "" ? false : true);
@@ -82,24 +82,32 @@ const MaterialButton = (props) => {
     props.onClick && props.onClick();
   };
   return (
+    // <div
+    //   style={{
+    //     width: "100%",
+    //     ...props.style,
+    //   }}
+    // >
+    //   <button
+    //     className="materialButton"
+    //     style={{
+    //       backgroundColor: props.bgColor,
+    //       color: props.textColor,
+    //       fontSize: props.fontSize,
+    //     }}
+    //     onClick={onClick}
+    //   >
+    //     {props.icon && props.icon}
+    //     {props.title && props.title}
+    //   </button>
+    // </div>
     <div
-      style={{
-        width: "100%",
-        ...props.style,
-      }}
+      className="d-flex"
+      style={{  ...props.style,}}
     >
-      <button
-        className="materialButton"
-        style={{
-          backgroundColor: props.bgColor,
-          color: props.textColor,
-          fontSize: props.fontSize,
-        }}
-        onClick={onClick}
-      >
-        {props.icon && props.icon}
-        {props.title && props.title}
-      </button>
+      <div className="button-group ml16 btn-primary section-text-5 btn-product-new">
+        <div className="btn-text"   onClick={onClick}>{props.title && props.title}</div>
+      </div>
     </div>
   );
 };
@@ -118,17 +126,17 @@ const DropdownMenu = (props) => {
             {props.menus &&
               props.menus.map((item, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     onClick={(e) => {
                       if (item.onClick) {
                         e.preventDefault();
                         item.onClick && item.onClick();
                       }
                     }}
-                    href={`${item.href}`}
+                    to={`${item.to}`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
           </ul>

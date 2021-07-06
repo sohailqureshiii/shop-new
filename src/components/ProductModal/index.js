@@ -42,7 +42,7 @@ const ProductModal = (props) => {
             <div className="productDescContainer">
               <div className="productDescImgContainer">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp0-c7PZi3hJulH_fnbH3UfG_4iX6ULwsuKQ&usqp=CAU"
+                  src="https://m.media-amazon.com/images/I/41vqgX0c5EL.jpg"
                   alt="new"
                 />
               </div>

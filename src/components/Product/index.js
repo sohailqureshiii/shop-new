@@ -4,7 +4,6 @@ import ProductModal from "../ProductModal";
 
 const Product = (props) => {
   const { product } = props;
-  const [productDetails, setProductDetails] = useState("");
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
@@ -18,7 +17,6 @@ const Product = (props) => {
         <div 
         onClick={() => handleShow()}
         // onClick={()=>setShow(true)}
-        
         >
           <div className="Galleries-gridCover-j9D">
             <div className="ProjectCoverNeue-root-166 ProjectCoverNeue-statsVisible-19j ProjectCover-cover-3zh">
@@ -29,7 +27,7 @@ const Product = (props) => {
                     <img
                       sizes="404px"
                       style={{ padding: "10px" }}
-                      src="https://m.media-amazon.com/images/I/71gD8WdSlaL._AC_UY218_.jpg"
+                      src="https://m.media-amazon.com/images/I/41vqgX0c5EL.jpg"
                       alt="new"
                       loading="lazy"
                       class="ProjectCoverNeue-image-1MZ js-cover-image"
@@ -69,7 +67,6 @@ const Product = (props) => {
           </div>
         </div>
       </div>
-
       <ProductModal
         show={show}
         handleclose={() => setShow(false)}

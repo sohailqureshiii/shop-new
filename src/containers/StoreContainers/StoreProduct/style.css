@@ -3,6 +3,7 @@
 }
 .p32 {
     padding: 32px;
+    padding-top: 65px;
 }
 
 .search-bar {
@@ -20,7 +21,7 @@
 }
 
 .button-group.btn-primary, .button-group.btn-primary-0, .button-group.btn-primary-4, .button-group.btn-primary-8 {
-    background: #146eb4;
+    background: grey;
     color: #fff;
 }
 .button-group {
