@@ -24,24 +24,43 @@ import StoreProfile from "./containers/StoreContainers/StoreProfile";
 import StoreAddProduct from "./containers/StoreContainers/AddProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLoggedIn } from "./actions/auth.action";
-import { getInitialData } from "./actions/initialData.action";
+import {
+  getUserDataAction,
+  userInitialdataAction,
+} from "./actions/initialData.action";
 
 function App() {
-
   const dispatch = useDispatch();
-  const auth = useSelector(state => state.auth)
+  const auth = useSelector((state) => state.auth);
 
   useEffect(() => {
     if (!auth.authenticate) {
       dispatch(isUserLoggedIn());
     }
+    // if(auth.authenticate){
+    //   console.log("yes");
+    // }
+  }, []);
 
-  },[]);
-
-  useEffect(()=>{
+  useEffect(() => {
     // window.location.reload();
-    dispatch(getInitialData())
-  },[auth.authenticate])
+    dispatch(getUserDataAction());
+  }, [auth.authenticate]);
+
+  useEffect(() => {
+    if (auth.authenticate) {
+      dispatch(userInitialdataAction());
+    }
+    // if(auth.authenticate && auth.user.store === "Yes"){
+    //   console.log("yes");
+    // }
+  }, [auth.authenticate]);
+
+  useEffect(() => {
+    if (auth.authenticate && auth.user.store === "Yes") {
+       dispatch
+    }
+  }, [auth.authenticate]);
 
   return (
     <div className="App">
@@ -63,7 +82,10 @@ function App() {
           <Route path="/storeDashboard" exact component={StoreDasboard} />
           <Route path="/storeProduct" exact component={StoreProduct} />
           <Route path="/storeOrder" exact component={StoreOrder} />
-          <Route path="/:productSlug/:productId/p" component={ProductDetailsPage}/>
+          <Route
+            path="/:productSlug/:productId/p"
+            component={ProductDetailsPage}
+          />
           {/* <Route path="/checkout" exact component={CheckoutPage} /> */}
           <Route path="/storeCoustomer" exact component={StoreCoustomers} />
           <Route path="/storeProfile" exact component={StoreProfile} />
