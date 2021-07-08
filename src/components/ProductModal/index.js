@@ -8,10 +8,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 
 const ProductModal = (props) => {
-  const { show, handleclose } = props;
-  // if (!productDetails) {
-  //   return null;
-  // }
+  const { show, handleclose, productDetails} = props;
+  if (!productDetails) {
+    return null;
+  }
 
   const diffToast = () => {
     toast.success("Item Added Successfull !", {
@@ -60,7 +60,7 @@ const ProductModal = (props) => {
                     style={{ maxWidth: "521px", top: "-1px" }}
                   >
                     <p style={{display:'flex'}}>
-                      Apple Store
+                      {productDetails.storeId.storeName}
                       {renderButton()}
                     </p>
                     <p
@@ -72,20 +72,19 @@ const ProductModal = (props) => {
                         marginRight: "20px",
                       }}
                     >
-                      Viman Nagar Pune
+                      {productDetails.storeLocation.name}
                     </p>
                   </div>
                 </div>
                 <h1 className="productTitle" style={{ maxWidth: "509px" }}>
-                  2020 Apple MacBook Pro (13.3-inch/33.78 cm, Apple M1 chip with
-                  8‑core CPU and 8‑core GPU, 8GB RAM, 256GB SSD) - Space Grey
+                 {productDetails.productName}
                 </h1>
                 <div className="flexRow priceContainer price">Price :
                   <span 
                   // classNa me="price"
                   >
                     <BiRupee />
-                    1,00,000
+                    {productDetails.productPrice}
                   </span>
 
                   {/* <span>i</span> */}
@@ -109,16 +108,7 @@ const ProductModal = (props) => {
                         color: "#212121",
                       }}
                     >
-                      Apple-designed M1 chip for a giant leap in CPU, GPU, and
-                      machine learning performance Get more done with up to 20
-                      hours of battery life, the longest ever in a Mac 8-core
-                      CPU delivers up to 2.8x faster performance to fly through
-                      workflows quicker than ever 8-core GPU with up to 5x
-                      faster graphics for graphics-intensive apps and games
-                      16-core Neural Engine for advanced machine learning 8GB of
-                      unified memory so everything you do is fast and fluid
-                      Superfast SSD storage launches apps and opens files in an
-                      instant
+                     {productDetails.productDescription}
                     </span>
                   </p>
                   <div className="share-btn-container">

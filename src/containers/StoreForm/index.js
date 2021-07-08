@@ -73,11 +73,16 @@ const StoreForm = () => {
                     >
                       storeCategory
                     </option>
-                    {categoriesList.map((value) => (
-                      <option key={value._id} value={value._id}>
-                        {value.name}
-                      </option>
-                    ))}
+                    {categoriesList
+                      .filter((category) => !category.parentId)
+                      .map((filterCategory) => (
+                        <option
+                          key={filterCategory._id}
+                          value={filterCategory._id}
+                        >
+                          {filterCategory.name}
+                        </option>
+                      ))}
                   </select>
                 </div>
                 <div>
