@@ -2,11 +2,8 @@ import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 
 const MenuNavBar = (props) => {
-
-
-  const categoriesList = useSelector((state)=>state.category.categories)
-  const locationList  = useSelector((state)=>state.location.locations)
-
+  const categoriesList = useSelector((state) => state.category.categories);
+  const locationList = useSelector((state) => state.location.locations);
 
   const inputSearch = useRef("");
   const inputLocation = useRef("");
@@ -24,14 +21,21 @@ const MenuNavBar = (props) => {
   };
   return (
     <>
-      <div style={{ paddingTop: "45px",position:'fixed', width:'100%', zIndex:'99' }}>
+      <div
+        style={{
+          paddingTop: "45px",
+          position: "fixed",
+          width: "100%",
+          zIndex: "99",
+        }}
+      >
         <nav
           className="NavigationBar-subcategoryList-1nX"
           style={{
-            padding: '15px 10px 15px 79px',
+            padding: "15px 10px 15px 79px",
             border: "1px solid #eaeaea",
             overflow: "auto",
-            paddingLeft:'79px'
+            paddingLeft: "79px",
           }}
         >
           <ul style={{ display: "contents" }}>
@@ -80,12 +84,17 @@ const MenuNavBar = (props) => {
                     onChange={getCategoryTerm}
                   >
                     <option value="">Category</option>
-                   
-                    {categoriesList.map((value) => (
-                      <option key={value._id} value={value._id}>
-                        {value.name}
-                      </option>
-                    ))}
+
+                    {categoriesList
+                      .filter((category) => !category.parentId)
+                      .map((filterCategory) => (
+                        <option
+                          key={filterCategory._id}
+                          value={filterCategory._id}
+                        >
+                          {filterCategory.name}
+                        </option>
+                      ))}
                   </select>
                 </div>
               </a>

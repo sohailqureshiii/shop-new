@@ -6,6 +6,12 @@ import NavBar from "../../components/Navbar";
 import Footer from "../../components/Footerr/Footer";
 
 const StoreProfile = (props) => {
+
+
+  const  storeId  = props.match.params.storeId;
+  const store = useSelector((state) => state.store.stores);
+  const product = useSelector((state) => state.product.products);
+
   const renderButton = (storeId) => {
     let storeterm = storeId;
     return <div className="Btn-label-1Zf e2e-Btn-label">Follow</div>;
@@ -16,11 +22,11 @@ const StoreProfile = (props) => {
     return (
       <div >
         <div className="lkmnjoirkee Galleries-grid-1Bv Galleries-header-14v">
+            {/* <Product />
             <Product />
             <Product />
             <Product />
-            <Product />
-            <Product />
+            <Product /> */}
             
         </div>
       </div>
@@ -30,6 +36,13 @@ const StoreProfile = (props) => {
   return (
     <>
       <NavBar />
+      {/* {
+       store.filter((store)=>{
+           if(store._id === storeId){
+             return store
+           }
+         })
+      } */}
       <div id="top-panel" className="slide-panel js-top-panel">
         <div
           tabIndex="0"

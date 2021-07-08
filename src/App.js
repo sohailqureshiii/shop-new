@@ -27,6 +27,8 @@ import { isUserLoggedIn } from "./actions/auth.action";
 import {
   getUserDataAction,
   userInitialdataAction,
+  userStoreDataAction,
+
 } from "./actions/initialData.action";
 
 function App() {
@@ -37,9 +39,6 @@ function App() {
     if (!auth.authenticate) {
       dispatch(isUserLoggedIn());
     }
-    // if(auth.authenticate){
-    //   console.log("yes");
-    // }
   }, []);
 
   useEffect(() => {
@@ -48,18 +47,18 @@ function App() {
   }, [auth.authenticate]);
 
   useEffect(() => {
-    if (auth.authenticate) {
+    // if (auth.authenticate) {
       dispatch(userInitialdataAction());
-    }
+    // }
     // if(auth.authenticate && auth.user.store === "Yes"){
     //   console.log("yes");
     // }
   }, [auth.authenticate]);
 
   useEffect(() => {
-    if (auth.authenticate && auth.user.store === "Yes") {
-      
-    }
+    // if (auth.authenticate && auth.user.store === "Yes") {
+      dispatch(userStoreDataAction())
+    // }
   }, [auth.authenticate]);
 
   return (

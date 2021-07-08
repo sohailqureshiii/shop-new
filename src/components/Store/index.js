@@ -9,7 +9,7 @@ const Store = (props) => {
         <div className="Galleries-gridCover-j9D">
           <div className="ProjectCoverNeue-root-166 ProjectCoverNeue-statsVisible-19j ProjectCover-cover-3zh">
           <Link 
-                   to='/:storeId/store'
+                   to={`/${store._id}/store`}
                    >
             <div style={{zIndex:'1'}}className="Cover-cover-2mr ProjectCoverNeue-cover-3Ni e2e-ProjectCoverNeue js-project-cover e2e-ProjectCoverNeue-cover ProjectCoverNeue-coverWithFlags-1Aq ProjectCoverNeue-statsVisible-19j ProjectCoverNeue-loaded-26R">
               <div className="Cover-wrapper-300 ProjectCoverNeue-wrapper-27j e2e-ProjectCoverNeue-wrapper">
@@ -42,7 +42,7 @@ const Store = (props) => {
                         className="Owners-owner-2lB e2e-Owner-user-link"
                         style={{ color: "black" }}
                       >
-                        Apple Store
+                        {store.storeName}
                       </a>
                     </span>
                   </div>

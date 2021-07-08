@@ -153,7 +153,7 @@ const Navigationbar = (props) => {
                 <div class="link-background">
                   <img src={Wishlisticon} className="homepagenavbar-icon" />
                   <a href="" class="middle">
-                    Favorite 1
+                    Favorite
                   </a>
                 </div>
               </h3>

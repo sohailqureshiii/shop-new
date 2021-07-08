@@ -14,17 +14,17 @@ const initState = {
   error: "",
   message: "",
   errorTF: false,
-  userStore: {
-    _id: "",
-    userName: "",
-    storeName: "",
-    storeType: "",
-    storeCategory: "",
-    storeLocation: "",
-    storePhoneNo: "",
-    storeAddress: "",
-    storePinCode: "",
-  },
+  // userStore: {
+  //   _id: "",
+  //   userName: "",
+  //   storeName: "",
+  //   storeType: "",
+  //   storeCategory: "",
+  //   storeLocation: "",
+  //   storePhoneNo: "",
+  //   storeAddress: "",
+  //   storePinCode: "",
+  // },
 };
 
 const auth = (state = initState, action) => {
@@ -70,7 +70,6 @@ const auth = (state = initState, action) => {
       state = {
         ...state,
         user: action.payload.data,
-        userStore: action.payload.stores,
         authenticate: true,
         authenticating: false,
         errorTF: false,

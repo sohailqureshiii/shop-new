@@ -5,18 +5,19 @@ import ProductModal from "../ProductModal";
 const Product = (props) => {
   const { product } = props;
   const [show, setShow] = useState(false);
+  const [productDetails,setProductDetails] = useState("");
+
 
   const handleShow = () => {
     setShow(true);
-    // setProductDetails(product);
+    setProductDetails(product);
   };
 
   return (
     <>
-      <div style={{ border: " 1px solid #d4d4d4", borderRadius: "5px" }}>
+      <div style={{ border: " 1px solid #d4d4d4", borderRadius: "5px" }} key={product._id}>
         <div 
         onClick={() => handleShow()}
-        // onClick={()=>setShow(true)}
         >
           <div className="Galleries-gridCover-j9D">
             <div className="ProjectCoverNeue-root-166 ProjectCoverNeue-statsVisible-19j ProjectCover-cover-3zh">
@@ -43,7 +44,7 @@ const Product = (props) => {
                     <div className="Owners-root-3c9 Owners-dark-1Vh Owners-overflowText-3Yn ProjectCoverNeue-owners-1qo">
                       <span className="js-mini-profile Owners-ownerAndAvatar-1d5">
                         <div className="Owners-owner-2lB e2e-Owner-user-link">
-                          2020 Apple MacBook Air - Gold
+                           {product.productName}
                         </div>
                       </span>
                     </div>
@@ -56,7 +57,7 @@ const Product = (props) => {
                         // to={`/${product.createdBy._id}/store`}
                         className="Owners-owner-2lB e2e-Owner-user-link"
                       >
-                        By - Apple Store
+                       {product.storeId.storeName}
                       </Link>
                     </span>
                   </div>
@@ -70,7 +71,7 @@ const Product = (props) => {
       <ProductModal
         show={show}
         handleclose={() => setShow(false)}
-        // productDetails={productDetails}
+        productDetails={productDetails}
       />
     </>
   );
